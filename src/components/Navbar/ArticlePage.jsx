@@ -1,0 +1,1 @@
+// this is a page for articles
