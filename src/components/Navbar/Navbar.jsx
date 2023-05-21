@@ -11,20 +11,20 @@ function Navbar() {
       : setActive("navMenu");
   };
 
-  //instagram link, photobook, twitter link.
+  //instagram Link, photobook, twitter Link.
   // make nav bar smaller
 
   return (
     <nav className="nav">
-      <a href="/" className="navBrand">
+      <Link to="/" className="navBrand">
         KHYЯON
-      </a>
+      </Link>
       <ul className={active}>
         <li className="navItem"></li>
         <li className="navItem">
-          <a href="/about" className="navLink">
+          <Link to="/about" className="navLink">
             About
-          </a>
+          </Link>
         </li>
         <li className="navItem">
           <a href="https://khykard.carrd.co/" className="navLink">

@@ -1,5 +1,6 @@
+import React, { useState, useEffect } from "react";
 import Masonry from "react-masonry-css";
-import PictureCard from "../PictureCard/PictureCard";
+import MasonryEntry from "./MasonryEntry.jsx";
 import "./MasonryGrid.css";
 
 function MasonryGrid() {
@@ -8,184 +9,40 @@ function MasonryGrid() {
     1100: 2,
     700: 1,
   };
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    fetch("/images")
+      .then((response) => response.json())
+      .then((images) => {
+        const imageElements = images.map((image) => {
+          const imageUrl = image.link;
+
+          return (
+            <MasonryEntry imageUrl={imageUrl} />
+            // <img
+            //   className={`easeload ${loaded ? "load" : ""}`}
+            //   onLoad={() => {
+            //     setLoaded(true);
+            //   }}
+            //   src={imageUrl}
+            //   alt="Images not loaded"
+            // />
+          );
+        });
+        setImages(imageElements);
+      });
+  }, []);
+
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      <PictureCard img="Images/ADAM_3[1].jpg" />
-      <PictureCard img="Images/NYC_122.jpg" />
-      <PictureCard img="Images/NYC_34.jpg" />
-      <PictureCard img="Images/CARA16.jpg" />
-      <PictureCard img="Images/AIRPORT2.jpg" />
-      <PictureCard img="Images/ALPHA_12.jpg" />
-      <PictureCard img="Images/SKATE_2[1].jpg" />
-      <PictureCard img="Images/ALPHA10.jpg" />
-      <PictureCard img="Images/CALI_18_PHOTOSHOP.jpg" />
-      <PictureCard img="Images/CALI14(2).jpg" />
-      <PictureCard img="Images/CALI1(2).jpg" />
-      <PictureCard img="Images/CARA22.jpg" />
-      <PictureCard img="Images/CHRO_3[1].jpg" />
-      <PictureCard img="Images/FRIENDS_20[1].jpg" />
-      <PictureCard img="Images/FRIENDS14.jpg" />
-      <PictureCard img="Images/GANG_AND_PAID 2.jpg" />
-      <PictureCard img="Images/GANG_AND_PAID 5.jpg" />
-      <PictureCard img="Images/KHYRON_29[1].jpg" />
-      <PictureCard img="Images/KHYRON22.jpg" />
-      <PictureCard img="Images/meninstreet.jpg" />
-      <PictureCard img="Images/MINNETONKA_3.jpg" />
-      <PictureCard img="Images/MINNETONKA.jpg" />
-      <PictureCard img="Images/NYC_14.jpg" />
-      <PictureCard img="Images/NYC_15.jpg" />
-      <PictureCard img="Images/NYC_19.jpg" />
-      <PictureCard img="Images/NYC_24.jpg" />
-      <PictureCard img="Images/NYC_27.jpg" />
-      <PictureCard img="Images/NYC_28.jpg" />
-      <PictureCard img="Images/NYC_31.jpg" />
-      <PictureCard img="Images/NYC_34.jpg" />
-      <PictureCard img="Images/NYC_54.jpg" />
-      <PictureCard img="Images/NYC_55.jpg" />
-      <PictureCard img="Images/NYC_63_(2).jpg" />
-      <PictureCard img="Images/NYC_75.jpg" />
-      <PictureCard img="Images/NYC_82.jpg" />
-      <PictureCard img="Images/NYC_86.jpg" />
-      <PictureCard img="Images/NYC_90.jpg" />
-      <PictureCard img="Images/NYC_99.jpg" />
-      <PictureCard img="Images/NYC_102.jpg" />
-      <PictureCard img="Images/NYC_106.jpg" />
-      <PictureCard img="Images/NYC_113.jpg" />
-      <PictureCard img="Images/NYC_119[1].jpg" />
-      <PictureCard img="Images/NYC_121.jpg" />
-      <PictureCard img="Images2/DSC01877.jpg" />
-      <PictureCard img="Images2/DSC02124.jpg" />
-      <PictureCard img="Images2/DSC02225.jpg" />
-      <PictureCard img="Images2/DSC02128.jpg" />
-      <PictureCard img="Images2/DSC02173.jpg" />
-      <PictureCard img="Images2/DSC02228.jpg" />
-      <PictureCard img="Images2/DSC02390.jpg" />
-      <PictureCard img="Images2/DSC02613.jpg" />
-      <PictureCard img="Images2/DSC02763.jpg" />
-      <PictureCard img="Images2/DSC02940.jpg" />
-      <PictureCard img="Images2/DSC03091.jpg" />
-      <PictureCard img="Images2/DSC03137.jpg" />
-      <PictureCard img="Images2/GAME 8.jpg" />
-      <PictureCard img="Images2/GROUP1.5.jpg" />
-      <PictureCard img="Images2/INTERHW2.jpg" />
-      <PictureCard img="Images2/KALISCREENSHOT.jpg" />
-      <PictureCard img="Images2/LOUISIANA11.jpg" />
-      <PictureCard img="Images2/MAKHIA1.5.jpg" />
-      <PictureCard img="Images2/MAKHIA17.jpg" />
-      <PictureCard img="Images2/NYC106.jpg" />
-      <PictureCard img="Images2/Getting_ready_3[1].jpg" />
-      <PictureCard img="Images2/MNSU_photoshopCopy1.jpg" />
-      <PictureCard img="Images2/NYC114.jpg" />
-      <PictureCard img="Images2/NYC132.jpg" />
-      <PictureCard img="Images2/NYC133.jpg" />
-      <PictureCard img="Images2/OVO8.jpg" />
-      <PictureCard img="Images2/OVO16.5.jpg" />
-      <PictureCard img="Images2/OVO21.jpg" />
-      <PictureCard img="Images2/PARTY2.jpg" />
-      <PictureCard img="Images2/PARTY6.jpg" />
-      <PictureCard img="Images2/PARTY7.jpg" />
-      <PictureCard img="Images2/PARTY9.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK22.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK23-2.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK37.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK45.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK48.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK49.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK1.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK2.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK5.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK6.jpg" />
-      <PictureCard img="Images2/PHOTOBOOK39.jpg" />
-      <PictureCard img="Images2/VINCE.jpg" />
-      <PictureCard img="Images2/WILLIAM.jpg" />
-      <PictureCard img="Images/ADAM_3[1].jpg" />
-      <PictureCard img="Images/NYC_122.jpg" />
-      <PictureCard img="Images/NYC_34.jpg" />
-      <PictureCard img="Images/CARA16.jpg" />
-      <PictureCard img="Images/AIRPORT2.jpg" />
-      <PictureCard img="Images/ALPHA_12.jpg" />
-      <PictureCard img="Images/SKATE_2[1].jpg" />
-      <PictureCard img="Images/ALPHA10.jpg" />
-      <PictureCard img="Images/CALI_18_PHOTOSHOP.jpg" />
-      <PictureCard img="Images/CALI14(2).jpg" />
-      <PictureCard img="Images/CALI1(2).jpg" />
-      <PictureCard img="Images/CARA22.jpg" />
-      <PictureCard img="Images/CHRO_3[1].jpg" />
-      <PictureCard img="Images/FRIENDS_20[1].jpg" />
-      <PictureCard img="Images/FRIENDS14.jpg" />
-      <PictureCard img="Images/GANG_AND_PAID 2.jpg" />
-      <PictureCard img="Images/GANG_AND_PAID 5.jpg" />
-      <PictureCard img="Images/KHYRON_29[1].jpg" />
-      <PictureCard img="Images/KHYRON22.jpg" />
-      <PictureCard img="Images/meninstreet.jpg" />
-      <PictureCard img="Images/MINNETONKA_3.jpg" />
-      <PictureCard img="Images/MINNETONKA.jpg" />
-      <PictureCard img="Images/NYC_14.jpg" />
-      <PictureCard img="Images/NYC_15.jpg" />
-      <PictureCard img="Images/NYC_19.jpg" />
-      <PictureCard img="Images/NYC_24.jpg" />
-      <PictureCard img="Images/NYC_27.jpg" />
-      <PictureCard img="Images/NYC_28.jpg" />
-      <PictureCard img="Images/NYC_31.jpg" />
-      <PictureCard img="Images/NYC_34.jpg" />
-      <PictureCard img="Images/NYC_54.jpg" />
-      <PictureCard img="Images/NYC_55.jpg" />
-      <PictureCard img="Images/NYC_63_(2).jpg" />
-      <PictureCard img="Images/NYC_75.jpg" />
-      <PictureCard img="Images/NYC_82.jpg" />
-      <PictureCard img="Images/NYC_86.jpg" />
-      <PictureCard img="Images/NYC_90.jpg" />
-      <PictureCard img="Images/NYC_99.jpg" />
-      <PictureCard img="Images/NYC_102.jpg" />
-      <PictureCard img="Images/NYC_106.jpg" />
-      <PictureCard img="Images/NYC_113.jpg" />
-      <PictureCard img="Images/NYC_119[1].jpg" />
-      <PictureCard img="Images/NYC_121.jpg" />
-      <PictureCard img="Images2/DSC01877.jpg" />
-      <PictureCard img="Images2/DSC02124.jpg" />
-      <PictureCard img="Images2/DSC02225.jpg" />
-      <PictureCard img="Images2/DSC02128.jpg" />
-      <PictureCard img="Images2/DSC02173.jpg" />
-      <PictureCard img="Images2/DSC02228.jpg" />
-      <PictureCard img="Images2/DSC02390.jpg" />
-      <PictureCard img="Images2/DSC02613.jpg" />
-      <PictureCard img="Images2/DSC02763.jpg" />
-      <PictureCard img="Images2/DSC02940.jpg" />
-      <PictureCard img="Images2/DSC03091.jpg" />
-      <PictureCard img="Images2/DSC03137.jpg" />
-      <PictureCard img="Images2/GAME 8.jpg" />
-      <PictureCard img="Images2/GROUP1.5.jpg" />
-      <PictureCard img="Images2/INTERHW2.jpg" />
-      <PictureCard img="Images2/KALISCREENSHOT.jpg" />
-      <PictureCard img="Images2/LOUISIANA11.jpg" />
-      <PictureCard img="Images2/MAKHIA1.5.jpg" />
-      <PictureCard img="Images2/MAKHIA17.jpg" />
-      <PictureCard img="Images2/NYC106.jpg" />
-      <PictureCard img="Images2/Getting_ready_3[1].jpg" />
-      <PictureCard img="Images2/MNSU_photoshopCopy1.jpg" />
-      <PictureCard img="Images2/NYC114.jpg" />
-      <PictureCard img="Images2/NYC132.jpg" />
-      <PictureCard img="Images2/NYC133.jpg" />
-      <PictureCard img="Images2/OVO8.jpg" />
-      <PictureCard img="Images2/OVO16.5.jpg" />
-      <PictureCard img="Images2/OVO21.jpg" />
-      <PictureCard img="Images2/PARTY2.jpg" />
-      <PictureCard img="Images2/PARTY6.jpg" />
-      <PictureCard img="Images2/PARTY7.jpg" />
-      <PictureCard img="Images2/PARTY9.jpg" />
-      <PictureCard img="Images/FRIENDS_20[1].jpg" />
-      <PictureCard img="Images/FRIENDS14.jpg" />
-      <PictureCard img="Images/CARA22.jpg" />
-      <PictureCard img="Images/CHRO_3[1].jpg" />
-      <PictureCard img="Images/NYC_86.jpg" />
-      <PictureCard img="Images2/DSC02173.jpg" />
-      <PictureCard img="Images/CALI1(2).jpg" />
-      <PictureCard img="Images/NYC_19.jpg" />
+      {images}
     </Masonry>
   );
 }
+
 export default MasonryGrid;
