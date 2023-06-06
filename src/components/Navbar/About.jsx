@@ -1,11 +1,10 @@
-import { render } from "react-dom";
-import PictureCard from "../PictureCard/PictureCard";
+import selfPicture from "./KHYRON35.jpeg";
 import "./About.css";
 function About() {
   return (
     // try couch pictutre.
     <div>
-      <PictureCard img="Images/KHYRON35.jpeg" />
+      <img src={selfPicture} alt="KHYRON.III" />
       <div className="storyTime">
         <h2>Bio</h2>
         <p2>

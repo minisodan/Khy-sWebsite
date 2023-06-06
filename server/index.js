@@ -11,7 +11,8 @@ const PORT = process.env.PORT;
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const IMGUR_BASE = "https://api.imgur.com/";
-const ALBUM_HASH = "hLEKGJW";
+const ALBUM_HASH = "OTwrAK2";
+const ALBUM_HASH2 = "taUE9V4";
 
 app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
@@ -29,6 +30,7 @@ app.get("/images", (req, res) => {
       res.send(response.data.data.images);
     })
     .catch((err) => {
+      console.log(err);
       res.status(400).send();
     });
 });
