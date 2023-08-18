@@ -3,6 +3,7 @@ import Masonry from "react-masonry-css";
 import MasonryEntry from "./MasonryEntry.jsx";
 import "./MasonryGrid.css";
 import useReachedBottom from "../../Hooks/useReachedBottom.jsx";
+import axios from "axios";
 
 function MasonryGrid({ scrollValue }) {
   const breakpointColumnsObj = {
@@ -27,13 +28,15 @@ function MasonryGrid({ scrollValue }) {
   const [lastIndex, setLastIndex] = useState(0);
 
   useEffect(() => {
-    fetch("/images")
-      .then((response) => response.json())
-      .then((images) => {
-        const imageElements = images.map((image) => {
+    axios
+      .get(`${IMGUR_BASE}3/album/${ALBUM_HASH}`, {
+        Authorization: `Client-ID ${CLIENT_ID}`,
+      })
+      .then((responseData) => {
+        const imageElements = responseData.data.data.images.map((image) => {
           const imageUrl = image.link;
 
-          return <MasonryEntry imageUrl={imageUrl} />;
+          return <MasonryEntry key={imageUrl} imageUrl={imageUrl} />;
         });
 
         setImages(imageElements);
