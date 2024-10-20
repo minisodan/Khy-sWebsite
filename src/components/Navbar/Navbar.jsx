@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -10,9 +9,6 @@ function Navbar() {
       ? setActive("navMenu navActive")
       : setActive("navMenu");
   };
-
-  //instagram Link, photobook, twitter Link.
-  // make nav bar smaller
 
   return (
     <nav className="nav">

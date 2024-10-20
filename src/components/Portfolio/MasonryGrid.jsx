@@ -4,7 +4,7 @@ import MasonryEntry from "./MasonryEntry.jsx";
 import "./MasonryGrid.css";
 import useReachedBottom from "../../Hooks/useReachedBottom.jsx";
 import axios from "axios";
-
+import Navbar from "../Navbar/Navbar.jsx";
 function MasonryGrid({ scrollValue }) {
   const breakpointColumnsObj = {
     default: 5,
@@ -27,30 +27,6 @@ function MasonryGrid({ scrollValue }) {
   const [currentImages, setCurrentImages] = useState([]);
   const [lastIndex, setLastIndex] = useState(0);
 
-  useEffect(() => {
-    axios
-      .get(`${IMGUR_BASE}3/album/${ALBUM_HASH}`, {
-        Authorization: `Client-ID ${CLIENT_ID}`,
-      })
-      .then((responseData) => {
-        const imageElements = responseData.data.data.images.map((image) => {
-          const imageUrl = image.link;
-
-          return <MasonryEntry key={imageUrl} imageUrl={imageUrl} />;
-        });
-
-        setImages(imageElements);
-        setCurrentImages(imageElements.slice(0, lastIndex + 20));
-        setLastIndex(lastIndex + 20);
-      });
-  }, []);
-
-  // return (
-  //   <div className="masonry-grid">
-  //     {currentImages}
-  //   </div>
-  // )
-
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}
@@ -58,6 +34,9 @@ function MasonryGrid({ scrollValue }) {
       columnClassName="my-masonry-grid_column"
     >
       {currentImages}
+      <div>
+        <small> © 2022 Khyron Site by Mason Myles</small>
+      </div>
     </Masonry>
   );
 }

@@ -1,10 +1,7 @@
-import selfPicture from "./KHYRON35.jpeg";
-import "./About.css";
 function About() {
   return (
-    // try couch pictutre.
     <div>
-      <img src={selfPicture} alt="KHYRON.III" />
+      <img src={"Images/KHYRON35.jpeg"} alt="KHYRON.III" />
       <div className="storyTime">
         <h2>Bio</h2>
         <p2>
