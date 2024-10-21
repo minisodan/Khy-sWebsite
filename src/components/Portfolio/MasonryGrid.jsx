@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Masonry from "react-masonry-css";
-import MasonryEntry from "./MasonryEntry.jsx";
 import "./MasonryGrid.css";
 import useReachedBottom from "../../Hooks/useReachedBottom.jsx";
-import axios from "axios";
-import Navbar from "../Navbar/Navbar.jsx";
 function MasonryGrid({ scrollValue }) {
   const breakpointColumnsObj = {
     default: 5,

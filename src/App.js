@@ -5,7 +5,6 @@ import Contact from "./components/Contact/Contact";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import Landing from "./components/Landing/Landing";
-import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
@@ -14,8 +13,9 @@ const App = () => {
       <Router>
         <header className="App-header">
           <Routes>
-            <Route path="/" element={<MasonryGrid />} />
-            <Route path="/landing" element={<Landing />} />
+            <Route path="/portfolio" element={<MasonryGrid />} />
+            <Route path="/" element={<Landing />}/>
+            {/* <Route path="/landing" element={<Landing />} /> */}
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
