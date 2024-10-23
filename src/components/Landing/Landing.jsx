@@ -1,4 +1,5 @@
 import Tab from "../Tab";
+import Footer from "../Navigation/Footer";
 
 const Landing = () => {
   const currentYear = new Date().getFullYear();
@@ -19,9 +20,7 @@ const Landing = () => {
         </div>
       </div>
       <div>
-        <footer class="flex justify-center text-zinc-50 mt-auto p-2">
-          <span class="text-sm text-center">© {currentYear} KHYЯON</span>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

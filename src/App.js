@@ -28,7 +28,6 @@ const App = () => {
                         <Route path="/contact" element={<Contact />} />
                       </Routes>
                     </div>
-                    <Footer />
                   </div>
                 </div>
               }

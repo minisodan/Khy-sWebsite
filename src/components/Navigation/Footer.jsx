@@ -1,8 +1,8 @@
 const Footer = () => {
   let year = new Date().getFullYear();
   return (
-    <div class="text-center text-zinc-50">
-      <p>© {year} Khyron, all rights reserved.</p>
+    <div class="text-sm text-center text-zinc-50">
+      <p>© {year} KHYЯON</p>
     </div>
   );
 };
