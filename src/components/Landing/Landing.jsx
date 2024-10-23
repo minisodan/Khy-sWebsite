@@ -8,9 +8,11 @@ const Landing = () => {
           Khyron
         </h1>
         <div class="flex justify-center gap-2 bg-blue-200 p-2">
-          <Tab text="home" link="/" />
+          <Tab text="portfolio" link="/portfolio" />
           <Tab text="about" link="/about" />
           <Tab text="contact" link="/contact" />
+          {/* email api*/}
+          {/* <Tab text="email me" link=""/> */}
         </div>
       </div>
       <div>
