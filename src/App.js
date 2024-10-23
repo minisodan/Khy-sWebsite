@@ -5,19 +5,34 @@ import Contact from "./components/Contact/Contact";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import Landing from "./components/Landing/Landing";
+import NavBar from "./components/Navigation/NavBar";
+import Footer from "./components/Navigation/Footer";
 
 const App = () => {
   return (
-    <div className="App">
-      {/* <Navbar /> */}
+    <div class="bg-slate-800 text-slate-800">
       <Router>
-        <header className="App-header">
+        <header>
           <Routes>
-            <Route path="/portfolio" element={<MasonryGrid />} />
-            <Route path="/" element={<Landing />}/>
-            {/* <Route path="/landing" element={<Landing />} /> */}
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Landing />} />
+            <Route
+              path="/*"
+              element={
+                <div class="flex flex-row">
+                  <NavBar />
+                  <div class="w-full">
+                    <div>
+                      <Routes>
+                        <Route path="/portfolio" element={<MasonryGrid />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                      </Routes>
+                    </div>
+                    <Footer />
+                  </div>
+                </div>
+              }
+            />
           </Routes>
         </header>
       </Router>

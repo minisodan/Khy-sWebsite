@@ -1,4 +1,4 @@
-import Tab from "./Tab";
+import Tab from "../Tab";
 const Landing = () => {
   const currentYear = new Date().getFullYear();
   return (
