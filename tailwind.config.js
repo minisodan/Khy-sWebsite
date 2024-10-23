@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "landing-image": "url('Images/JAPAN39.jpg')",
+        // "about-image": "url('Images/1-1.jpg')",
       },
       keyframes: {
         "fade-in-up": {
