@@ -31,9 +31,6 @@ function MasonryGrid({ scrollValue }) {
       columnClassName="my-masonry-grid_column"
     >
       {currentImages}
-      <div>
-        <small> © 2022 Khyron Site by Mason Myles</small>
-      </div>
     </Masonry>
   );
 }
