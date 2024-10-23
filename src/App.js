@@ -5,8 +5,6 @@ import Contact from "./components/Contact/Contact";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import Landing from "./components/Landing/Landing";
-import NavBar from "./components/Navigation/NavBar";
-import Footer from "./components/Navigation/Footer";
 
 const App = () => {
   return (
@@ -18,16 +16,13 @@ const App = () => {
             <Route
               path="/*"
               element={
-                <div class="flex flex-row">
-                  <NavBar />
-                  <div class="w-full">
-                    <div>
-                      <Routes>
-                        <Route path="/portfolio" element={<MasonryGrid />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/contact" element={<Contact />} />
-                      </Routes>
-                    </div>
+                <div class="w-full">
+                  <div>
+                    <Routes>
+                      <Route path="/portfolio" element={<MasonryGrid />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/contact" element={<Contact />} />
+                    </Routes>
                   </div>
                 </div>
               }

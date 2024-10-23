@@ -1,5 +1,5 @@
-const SVGWrapper = ({ size, color, children }) => (
-  <span class={`[&>svg]:h-${size} [&>svg]:w-${size} [&>svg]:fill-[${color}]`}>
+const SVGWrapper = ({ color, children }) => (
+  <span class={`[&>svg]:h-10 [&>svg]:w-10 [&>svg]:fill-[${color}]`}>
     {children}
   </span>
 );
