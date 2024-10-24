@@ -71,6 +71,11 @@ function Contact() {
                 placeholder="Message"
               />
             </div>
+            <div class="p-2">
+              <button class="w-full border-2 border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300">
+                SEND
+              </button>
+            </div>
           </div>
           <Footer />
         </div>
