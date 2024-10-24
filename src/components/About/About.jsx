@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="flex flex-row h-screen bg-about-image bg-no-repeat bg-cover bg-center">
+    <div className="flex flex-col md:flex-row bg-about-image bg-no-repeat bg-cover bg-center">
       <NavBar />
-      <div className="flex flex-row w-full animate-fade-in-up justify-center items-start h-full p-6">
-        <div className="mt-auto mb-auto w-1/3 bg-white p-6 mr-4 flex flex-col justify-between">
+      <div className="flex flex-col md:flex-row w-full animate-fade-in-up justify-center items-start p-6 gap-4">
+        <div className="mt-auto mb-auto w-full md:w-1/3 bg-white p-6 mr-0 md:mr-4 flex flex-col justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-gray-800">Bio</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800">Bio</h2>
             <p className="text-gray-700 text-justify">
               Born in Killeen TX but raised in Northern Louisiana and now
               currently attending MNSU (Minnesota State University Mankato) for
@@ -30,15 +30,16 @@ function About() {
             </button>
           </Link>
         </div>
-        <div className="mt-auto mb-auto w-1/3 h-1/2">
+        <div className="mt-auto mb-auto w-full lg:w-1/3 lg:h-1/2 md:w-1/3 md:h-auto">
           <img
             src={"Images/KHYRON35.jpeg"}
             alt="KHYRON.III"
-            className="h-full w-full object-cover"
+            className="h-auto w-full object-cover md:h-full"
           />
         </div>
       </div>
     </div>
   );
 }
+
 export default About;
