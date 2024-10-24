@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "landing-image": "url('Images/JAPAN39.jpg')",
+        "landing-image": "url('Images/LandingBackground.jpg')",
         "contact-image": "url('Images/ContactBackground.jpg')",
+        "about-image": "url('Images/AboutBackground.jpg')",
       },
       keyframes: {
         "fade-in-up": {

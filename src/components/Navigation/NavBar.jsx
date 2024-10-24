@@ -10,7 +10,7 @@ const NavBar = () => {
       <div class="h-full flex flex-col gap-2">
         <div class="border-solid border-2 border-zinc-50 p-1">
           <div class="bg-zinc-50 p-2 ">
-            <a href="/portfolio" class="text-3xl font-semibold uppercase">
+            <a href="/" class="text-3xl font-semibold uppercase">
               KhyЯon
             </a>
           </div>

@@ -1,24 +1,41 @@
 import NavBar from "../Navigation/NavBar";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div class="flex flex-row bg-contact-image bg-no-repeat bg-cover bg-center">
+    <div className="flex flex-row h-screen bg-about-image bg-no-repeat bg-cover bg-center">
       <NavBar />
-      <div>
-        <img src={"Images/KHYRON35.jpeg"} alt="KHYRON.III" />
-        <div className="storyTime">
-          <h2>Bio</h2>
-          <p>
-            Born in Texas, but raised in Louisiana and now currently attending
-            MNSU for an Art Degree, Khy has been doing photography for only a
-            year now. In May 2021, He bought his first DSLR Camera [Sony A7iii]
-            and consistently uploads his photos on this website or his Instagram
-            account [@khyron.iii] Khy has an eye for capturing real "In the
-            moment" pictures and strives to make the viewer feel like they are
-            actually there in the photo. He mainly does street photography, but
-            really will shoot anything on his camera from nature to architecture
-            to even studio photographs.
-          </p>
+      <div className="flex flex-row w-full animate-fade-in-up justify-center items-start h-full p-6">
+        <div className="mt-auto mb-auto w-1/3 bg-white p-6 mr-4 flex flex-col justify-between">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800">Bio</h2>
+            <p className="text-gray-700 text-justify">
+              Born in Killeen TX but raised in Northern Louisiana and now
+              currently attending MNSU (Minnesota State University Mankato) for
+              an Art BA Degree, Khyron's work is a reflection of his community,
+              race, and upbringing. In May 2021, he bought his first DSLR Camera
+              [Sony A7iii] and consistently uploads his photos on this website
+              or his Instagram account [@khyron.iii]. Khy has an eye for
+              capturing real in-the-moment pictures and strives to make the
+              viewer's semblance connected to his work. He's had solo
+              exhibitions in the main art gallery of MNSU titled “Human Xenon”
+              in 2022 and another one downtown, Mankato, in an art space titled
+              the “410 Project,” where he displayed his work titled “Fornever”
+              within the same year.
+            </p>
+          </div>
+          <Link to="/contact">
+            <button className="w-full border-2 border-slate-800 my-2 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300">
+              Get in Touch with Me
+            </button>
+          </Link>
+        </div>
+        <div className="mt-auto mb-auto w-1/3 h-1/2">
+          <img
+            src={"Images/KHYRON35.jpeg"}
+            alt="KHYRON.III"
+            className="h-full w-full object-cover"
+          />
         </div>
       </div>
     </div>
