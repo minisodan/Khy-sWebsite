@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Masonry from "react-masonry-css";
 import "./MasonryGrid.css";
 import useReachedBottom from "../../Hooks/useReachedBottom.jsx";
+import NavBar from "../Navigation/NavBar";
+
 function MasonryGrid({ scrollValue }) {
   const breakpointColumnsObj = {
     default: 5,
@@ -25,16 +27,16 @@ function MasonryGrid({ scrollValue }) {
   const [lastIndex, setLastIndex] = useState(0);
 
   return (
-    <Masonry
-      breakpointCols={breakpointColumnsObj}
-      className="my-masonry-grid"
-      columnClassName="my-masonry-grid_column"
-    >
-      {currentImages}
-      <div>
-        <small> © 2022 Khyron Site by Mason Myles</small>
-      </div>
-    </Masonry>
+    <div class="flex flex-row bg-contact-image bg-no-repeat bg-cover bg-center">
+      <NavBar />
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
+        {currentImages}
+      </Masonry>
+    </div>
   );
 }
 
