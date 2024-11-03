@@ -6,35 +6,64 @@ import Youtube from "../SVG/Youtube";
 import TikTok from "../SVG/TikTok";
 import SVGWrapper from "../SVG/SVGWrapper";
 import NavBar from "../Navigation/NavBar";
-const SLATE_800 = "#1e293b";
 
 function Contact() {
   return (
     <div class="flex flex-row bg-contact-image bg-no-repeat bg-cover bg-center">
       <NavBar />
       <div class="w-full align-middle h-screen items-center animate-fade-in-up flex justify-center pt-10">
-        <div class="w-96 flex flex-col gap-2">
+        <div class="min-w-96 w-8/12 max-w-2xl flex flex-col gap-2">
           <div class="text-center bg-zinc-50 uppercase">
             <h1 class="text-4xl font-semibold uppercase">contact me</h1>
           </div>
           <div class="p-2 bg-zinc-50 flex flex-col justify-center gap-2 text-center">
             <h2 class="text-2xl uppercase">Socials</h2>
             <div class="flex flex-row gap-5 justify-center">
-              <SVGWrapper color={SLATE_800}>
-                <Instagram />
-              </SVGWrapper>
-              <SVGWrapper color={SLATE_800}>
-                <Twitter />
-              </SVGWrapper>
-              <SVGWrapper color={SLATE_800}>
-                <Twitch />
-              </SVGWrapper>
-              <SVGWrapper color={SLATE_800}>
-                <Youtube />
-              </SVGWrapper>
-              <SVGWrapper color={SLATE_800}>
-                <TikTok />
-              </SVGWrapper>
+              <a
+                href="https://www.instagram.com/khyron.iii/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SVGWrapper>
+                  <Instagram />
+                </SVGWrapper>
+              </a>
+              <a
+                href="https://mobile.twitter.com/yoh_khy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SVGWrapper>
+                  <Twitter />
+                </SVGWrapper>
+              </a>
+              <a
+                href="https://m.twitch.tv/yoh_khy/home"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SVGWrapper>
+                  <Twitch />
+                </SVGWrapper>
+              </a>
+              <a
+                href="https://youtube.com/channel/UCAjtTiErkuflsEZbAS8rXQw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SVGWrapper>
+                  <Youtube />
+                </SVGWrapper>
+              </a>
+              <a
+                href="https://vm.tiktok.com/TTPdh7ohPP/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SVGWrapper>
+                  <TikTok />
+                </SVGWrapper>
+              </a>
             </div>
           </div>
           <div class="bg-zinc-50 flex flex-col text-center">

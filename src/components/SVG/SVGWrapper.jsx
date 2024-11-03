@@ -1,6 +1,8 @@
-const SVGWrapper = ({ color, children }) => (
-  <span class={`[&>svg]:h-10 [&>svg]:w-10 [&>svg]:fill-[${color}]`}>
+const SVGWrapper = ({ children }) => (
+  <svg
+    class={`h-10 w-10 transition-colors duration-300 ease-in-out bg-zinc-50 fill-gray-400 hover:fill-slate-800`}
+  >
     {children}
-  </span>
+  </svg>
 );
 export default SVGWrapper;
