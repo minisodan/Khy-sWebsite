@@ -27,15 +27,17 @@ function MasonryGrid({ scrollValue }) {
   const [lastIndex, setLastIndex] = useState(0);
 
   return (
-    <div class="flex flex-row bg-contact-image bg-no-repeat bg-cover bg-center">
+    <div class="flex flex-row bg-contact-image bg-no-repeat bg-cover bg-center min-h-screen">
       <NavBar />
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {currentImages}
-      </Masonry>
+      <div class="ml-44">
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {currentImages}
+        </Masonry>
+      </div>
     </div>
   );
 }

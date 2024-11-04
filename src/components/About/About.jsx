@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="flex flex-col md:flex-row bg-about-image bg-no-repeat bg-cover bg-center">
+    <div className="flex flex-col md:flex-row bg-about-image bg-no-repeat bg-cover bg-center min-h-screen">
       <NavBar />
-      <div className="flex flex-col md:flex-row w-full animate-fade-in-up justify-center items-start p-6 gap-4">
+      <div className="flex flex-col ml-44 md:flex-row w-full animate-fade-in-up justify-center items-start p-6 gap-4">
         <div className="mt-auto mb-auto w-full md:w-1/3 bg-white p-6 mr-0 md:mr-4 flex flex-col justify-between">
           <div>
             <h2 className="text-xl md:text-2xl font-bold text-gray-800">Bio</h2>

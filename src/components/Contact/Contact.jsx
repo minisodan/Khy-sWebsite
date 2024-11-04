@@ -9,9 +9,9 @@ import NavBar from "../Navigation/NavBar";
 
 function Contact() {
   return (
-    <div className="flex flex-col md:flex-row bg-contact-image bg-no-repeat bg-cover bg-center h-screen">
+    <div className="flex flex-col md:flex-row bg-contact-image bg-no-repeat bg-cover bg-center h-screen min-h-screen">
       <NavBar />
-      <div class="w-full align-middle h-screen items-center animate-fade-in-up flex justify-center pt-10">
+      <div class="w-full align-middle h-screen items-center animate-fade-in-up flex justify-center pt-10 ml-44">
         <div class="min-w-96 w-8/12 max-w-2xl flex flex-col gap-2">
           <div class="text-center bg-zinc-50 uppercase">
             <h1 class="text-4xl font-semibold uppercase">contact me</h1>
