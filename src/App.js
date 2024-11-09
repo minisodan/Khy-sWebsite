@@ -8,16 +8,25 @@ import Landing from "./components/Landing/Landing";
 
 const App = () => {
   return (
-    <div className="App">
-      {/* <Navbar /> */}
+    <div class="bg-slate-800 text-slate-800 bg-cover bg-center bg-landing-image">
       <Router>
-        <header className="App-header">
+        <header>
           <Routes>
-            <Route path="/portfolio" element={<MasonryGrid />} />
-            <Route path="/" element={<Landing />}/>
-            {/* <Route path="/landing" element={<Landing />} /> */}
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Landing />} />
+            <Route
+              path="/*"
+              element={
+                <div class="w-full">
+                  <div>
+                    <Routes>
+                      <Route path="/portfolio" element={<MasonryGrid />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                  </div>
+                </div>
+              }
+            />
           </Routes>
         </header>
       </Router>
