@@ -9,16 +9,21 @@ import NavBar from "../Navigation/NavBar";
 
 function Contact() {
   return (
-    <div className="flex flex-col md:flex-row bg-contact-image bg-no-repeat bg-cover bg-center h-screen min-h-screen">
+    <div className="flex flex-col min-h-screen">
+      {/* Full-width NavBar */}
       <NavBar />
-      <div class="w-full align-middle h-screen items-center animate-fade-in-up flex justify-center pt-10 ml-44">
-        <div class="min-w-96 w-8/12 max-w-2xl flex flex-col gap-2">
-          <div class="text-center bg-zinc-50 uppercase">
-            <h1 class="text-4xl font-semibold uppercase">contact me</h1>
+      <div className="flex flex-col items-center justify-center w-full pt-10 px-4 animate-fade-in-up">
+        <div className="w-full max-w-2xl flex flex-col gap-4">
+          <div className="border-solid border-2 border-zinc-50 p-1">
+            <div className="text-center bg-zinc-50 uppercase">
+              <h1 className="text-4xl font-semibold uppercase">Contact Me</h1>
+            </div>
           </div>
-          <div class="p-2 bg-zinc-50 flex flex-col justify-center gap-2 text-center">
-            <h2 class="text-2xl uppercase">Socials</h2>
-            <div class="flex flex-row gap-5 justify-center">
+
+          {/* Socials Section */}
+          <div className="p-2 bg-zinc-50 flex flex-col justify-center gap-4 text-center">
+            <h2 className="text-2xl uppercase">Socials</h2>
+            <div className="flex flex-wrap justify-center gap-5">
               <a
                 href="https://www.instagram.com/khyron.iii/"
                 target="_blank"
@@ -66,9 +71,11 @@ function Contact() {
               </a>
             </div>
           </div>
+
+          {/* E-Mail Section */}
           <div className="bg-zinc-50 flex flex-col text-center">
             <h2 className="p-2 text-2xl uppercase">E-Mail</h2>
-            <div className="flex flex-col gap-2 p-2">
+            <div className="flex flex-col gap-4 p-4">
               <input
                 className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
                 type="email"
@@ -97,6 +104,7 @@ function Contact() {
               </button>
             </div>
           </div>
+
           <Footer />
         </div>
       </div>
