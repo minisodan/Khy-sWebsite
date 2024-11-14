@@ -5,8 +5,8 @@ function About() {
   return (
     <div className="flex flex-col md:min-h-screen">
       <NavBar />
-      <div className="flex flex-col md:ml-44 md:flex-row justify-center items-center min-h-screen w-full">
-        <div className="flex flex-col md:w-3/4 lg:w-2/3 p-6 gap-4 items-center w-full">
+      <div className="flex flex-col md:flex-row justify-center items-center min-h-screen w-full">
+        <div className="flex flex-col md:w-3/4 lg:w-2/3 p-6 gap-4 items-center w-full md:ml-44">
           <div className="border-solid border-2 border-zinc-50 p-1 w-full">
             <div className="text-center bg-zinc-50 uppercase">
               <h1 className="text-4xl font-semibold uppercase">
