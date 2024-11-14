@@ -19,17 +19,18 @@ const NavBar = () => {
       <div className="h-full flex flex-col gap-2">
         <div className="border-solid border-2 border-zinc-50 p-1">
           <div className="bg-zinc-50 p-2 flex justify-between items-center">
+            {/* Centered Text */}
             <a href="/" className="text-3xl font-semibold uppercase">
               KhyЯon
             </a>
-            {/* Hamburger button for mobile */}
-            <button className="md:hidden text-2xl" onClick={toggleMenu}>
+            {/* Hamburger on the far right */}
+            <button className="md:hidden text-2xl ml-auto" onClick={toggleMenu}>
               {isMenuOpen ? "✖" : "☰"}
             </button>
           </div>
         </div>
         <div
-          className={`h-full bg-zinc-50 flex flex-col p-2 ${
+          className={`h-full bg-zinc-50 flex flex-col p-2 transition-transform duration-300 ${
             isMenuOpen ? "block" : "hidden"
           } md:flex md:block`}
         >

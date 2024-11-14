@@ -8,7 +8,7 @@ import Landing from "./components/Landing/Landing";
 
 const App = () => {
   return (
-    <div class="bg-slate-800 text-slate-800">
+    <div class="bg-slate-800 text-slate-800 bg-cover bg-center bg-landing-image">
       <Router>
         <header>
           <Routes>
