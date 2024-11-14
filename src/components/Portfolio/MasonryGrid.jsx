@@ -27,9 +27,9 @@ function MasonryGrid({ scrollValue }) {
   const [lastIndex, setLastIndex] = useState(0);
 
   return (
-    <div class="flex flex-row bg-contact-image bg-no-repeat bg-cover bg-center min-h-screen">
+    <div class="flex flex-row bg-contact-image bg-no-repeat bg-cover bg-center md:min-h-screen">
       <NavBar />
-      <div class="ml-44">
+      <div class="md:ml-44">
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"

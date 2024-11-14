@@ -18,7 +18,7 @@ const NavBar = () => {
     <div className="lg:fixed p-3 md:h-full md:fixed md:top-0 md:left-0 md:w-44 p-2">
       <div className="h-full flex flex-col gap-2">
         <div className="border-solid border-2 border-zinc-50 p-1">
-          <div className="bg-zinc-50 p-2 flex justify-center items-center">
+          <div className="bg-zinc-50 p-2 flex justify-between items-center">
             <a href="/" className="text-3xl font-semibold uppercase">
               KhyЯon
             </a>
