@@ -9,7 +9,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 
 const App = () => {
   return (
-    <div className="bg-slate-800 text-slate-800 bg-cover bg-center bg-landing-image">
+    <div className="bg-slate-800 text-slate-800 bg-fixed bg-center bg-landing-image">
       <Router>
         <header>
           <Routes>

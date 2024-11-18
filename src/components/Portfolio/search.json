@@ -1,5 +1,6 @@
-{
-    "1": {
+[
+    {
+        "name": "1.jpg",
         "description": "light in abandon building",
         "people": 0,
         "location": {
@@ -8,7 +9,8 @@
         },
         "isLandscape": false
     },
-    "2": {
+    {
+        "name": "2.jpg",
         "description": "person sitting at table",
         "people": 1,
         "location": {
@@ -17,7 +19,8 @@
         },
         "isLandscape": false
     },
-    "3": {
+    {
+        "name": "3.jpg",
         "description": "flowers",
         "people": 0,
         "location": {
@@ -26,7 +29,8 @@
         },
         "isLandscape": false
     },
-    "4": {
+    {
+        "name": "4.jpg",
         "description": "guy in house playing video games",
         "people": 1,
         "location": {
@@ -35,7 +39,8 @@
         },
         "isLandscape": false
     },
-    "5": {
+    {
+        "name": "5.jpg",
         "description": "landscape of buildings in New York City",
         "people": 0,
         "location": {
@@ -44,7 +49,8 @@
         },
         "isLandscape": true
     },
-    "6": {
+    {
+        "name": "6.jpg",
         "description": "Tyler, the Creator. Kali Uchis",
         "people": 1,
         "location": {
@@ -53,7 +59,8 @@
         },
         "isLandscape": false
     },
-    "7": {
+    {
+        "name": "7.jpg",
         "description": "Night Landscape",
         "people": 0,
         "location": {
@@ -62,7 +69,8 @@
         },
         "isLandscape": true
     },
-    "8": {
+    {
+        "name": "8.jpg",
         "description": "Flowers",
         "people": 0,
         "location": {
@@ -71,7 +79,8 @@
         },
         "isLandscape": false
     },
-    "9": {
+    {
+        "name": "9.jpg",
         "description": "Tyler, the Creator. Concert",
         "people": 1,
         "location": {
@@ -80,7 +89,8 @@
         },
         "isLandscape": false
     },
-    "10": {
+    {
+        "name": "10.jpg",
         "description": "Tyler, the Creator. Vince Staples",
         "people": 1,
         "location": {
@@ -89,7 +99,8 @@
         },
         "isLandscape": false
     },
-    "11": {
+    {
+        "name": "11.jpg",
         "description": "Tyler, the Creator. Concert",
         "people": 1,
         "location": {
@@ -98,7 +109,8 @@
         },
         "isLandscape": false
     },
-    "12": {
+    {
+        "name": "12.jpg",
         "description": "store at night time",
         "people": 0,
         "location": {
@@ -107,7 +119,8 @@
         },
         "isLandscape": false
     },
-    "13": {
+    {
+        "name": "13.jpg",
         "description": "Puma store in New York City",
         "people": 1,
         "location": {
@@ -116,7 +129,8 @@
         },
         "isLandscape": true
     },
-    "14": {
+    {
+        "name": "14.jpg",
         "description": "Tyler, the Creator. Vince Staples",
         "people": 1,
         "location": {
@@ -125,7 +139,8 @@
         },
         "isLandscape": false
     },
-    "15": {
+    {
+        "name": "15.jpg",
         "description": "Stores in New York on the street",
         "people": 11,
         "location": {
@@ -134,7 +149,8 @@
         },
         "isLandscape": true
     },
-    "16": {
+    {
+        "name": "16.jpg",
         "description": "neighborhood",
         "people": 0,
         "location": {
@@ -143,7 +159,8 @@
         },
         "isLandscape": true
     },
-    "17": {
+    {
+        "name": "17.jpg",
         "description": "neighborhood",
         "people": 0,
         "location": {
@@ -152,7 +169,8 @@
         },
         "isLandscape": true
     },
-    "18": {
+    {
+        "name": "18.jpg",
         "description": "New York train",
         "people": 11,
         "location": {
@@ -161,7 +179,8 @@
         },
         "isLandscape": true
     },
-    "19": {
+    {
+        "name": "19.jpg",
         "description": "Tyler, the Creator. Concert",
         "people": 1,
         "location": {
@@ -170,7 +189,8 @@
         },
         "isLandscape": false
     },
-    "20": {
+    {
+        "name": "20.jpg",
         "description": "man in store, pricing",
         "people": 2,
         "location": {
@@ -179,4 +199,4 @@
         },
         "isLandscape": false
     }
-}
+]
