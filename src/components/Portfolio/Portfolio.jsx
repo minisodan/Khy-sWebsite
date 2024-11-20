@@ -5,6 +5,13 @@ import NavBar from "../Navigation/NavBar";
 const metadata = require("./search.json");
 
 const Portfolio = () => { 
+  
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 3,
+    700: 1,
+  };
+
     return (
     <div className="flex flex-col md:flex-row min-h-screen">
       <NavBar />
@@ -23,6 +30,7 @@ const Portfolio = () => {
         </div>
         <div>
           <Masonry
+            breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid bg-zinc-50"
             columnClassName="my-masonry-grid_column"
           >
