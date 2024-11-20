@@ -6,12 +6,9 @@
   justify-content: center;
   align-content: stretch;
   width: 100%;
-  padding-right: 25px;
-  padding-left: 10px;
-  background-color: #161616;
+  padding: .25rem;
 }
 .my-masonry-grid_column {
-  padding: 2px;
   background-clip: padding-box;
   display: flex;
   flex-direction: column;
@@ -23,7 +20,6 @@
 .my-masonry-grid_column > img {
   width: 100%;
   height: auto;
-  margin: 2px;
 }
 
 .easeload {

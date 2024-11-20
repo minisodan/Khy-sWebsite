@@ -20,7 +20,7 @@ const NavBar = () => {
         <div className="border-solid border-2 border-zinc-50 p-1">
           <div className="bg-zinc-50 p-2 flex justify-between items-center">
             {/* Centered Text */}
-            <a href="/" className="text-3xl font-semibold uppercase mx-auto">
+            <a href="/" className="text-3xl font-semibold uppercase">
               KhyЯon
             </a>
             {/* Hamburger on the far right */}
