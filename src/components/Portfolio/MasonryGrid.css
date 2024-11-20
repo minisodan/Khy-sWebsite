@@ -6,7 +6,7 @@
   justify-content: center;
   align-content: stretch;
   width: 100%;
-  padding: .25rem;
+  gap: .25rem;
 }
 .my-masonry-grid_column {
   background-clip: padding-box;
@@ -15,6 +15,7 @@
   justify-content: flex-start;
   align-content: stretch;
   flex-grow: 1;
+  gap: .25rem;
 }
 
 .my-masonry-grid_column > img {

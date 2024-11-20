@@ -5,7 +5,7 @@ import NavBar from "../Navigation/NavBar";
 const metadata = require("./search.json");
 
 const Portfolio = () => { 
-  
+
   const breakpointColumnsObj = {
     default: 3,
     1100: 3,
@@ -16,7 +16,7 @@ const Portfolio = () => {
     <div className="flex flex-col md:flex-row min-h-screen">
       <NavBar />
 
-      <div className="ml-0 md:ml-44 w-full flex flex-col gap-2 p-3">
+      <div className="ml-0 md:ml-44 w-full flex flex-col gap-2 p-3 animate-fade-in-up">
         <div className="flex p-1 border-2">
           <button className="border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300">
             ≣
@@ -28,15 +28,15 @@ const Portfolio = () => {
             aria-label="Search"
           />
         </div>
-        <div>
+        <div className="border-solid border-2 border-zinc-50 p-1">
           <Masonry
-            breakpointCols={breakpointColumnsObj}
-            className="my-masonry-grid bg-zinc-50"
+            breakpointCols={breakpointColumnsObj}zinc
+            className="my-masonry-grid bg-slate-800"
             columnClassName="my-masonry-grid_column"
           >
             {metadata.map((entry, index) => (
               <div key={index}>
-                <img src={`Images/search/${entry.name}`} alt={entry.description} className="w-full p-1" />
+                <img src={`Images/search/${entry.name}`} alt={entry.description} className="w-full" />
               </div>
             ))}
           </Masonry>
