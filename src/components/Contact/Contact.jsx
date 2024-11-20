@@ -9,11 +9,11 @@ import NavBar from "../Navigation/NavBar";
 
 function Contact() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col md:min-h-screen">
       {/* Full-width NavBar */}
       <NavBar />
       <div className="flex flex-col items-center justify-center w-full pt-10 px-4 animate-fade-in-up">
-        <div className="w-full max-w-2xl flex flex-col gap-4">
+        <div className="w-full max-w-xl flex flex-col gap-4 md:ml-44">
           <div className="border-solid border-2 border-zinc-50 p-1">
             <div className="text-center bg-zinc-50 uppercase">
               <h1 className="text-4xl font-semibold uppercase">Contact Me</h1>
