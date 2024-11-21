@@ -1,19 +1,20 @@
 import Masonry from "react-masonry-css";
 import NavBar from "../Navigation/NavBar";
-
+import ImageCarousel from "./Carousel";
 
 const metadata = require("./search.json");
 
-const Portfolio = () => { 
-
+const Portfolio = () => {
   const breakpointColumnsObj = {
     default: 3,
     1100: 3,
     700: 1,
   };
 
-    return (
+  return (
     <div className="flex flex-col md:flex-row min-h-screen">
+      <ImageCarousel imageMetadata={metadata}></ImageCarousel>
+
       <NavBar />
 
       <div className="ml-0 md:ml-44 w-full flex flex-col gap-2 p-3 animate-fade-in-up">
@@ -30,13 +31,17 @@ const Portfolio = () => {
         </div>
         <div className="border-solid border-2 border-zinc-50 p-1">
           <Masonry
-            breakpointCols={breakpointColumnsObj}zinc
-            className="my-masonry-grid bg-slate-800"
-            columnClassName="my-masonry-grid_column"
+            breakpointCols={breakpointColumnsObj}
+            className="flex gap-1 bg-slate-800"
+            columnClassName="flex flex-col gap-1"
           >
             {metadata.map((entry, index) => (
               <div key={index}>
-                <img src={`Images/search/${entry.name}`} alt={entry.description} className="w-full" />
+                <img
+                  src={`Images/search/${entry.name}`}
+                  alt={entry.description}
+                  className="w-full"
+                />
               </div>
             ))}
           </Masonry>
@@ -44,6 +49,6 @@ const Portfolio = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Portfolio;
