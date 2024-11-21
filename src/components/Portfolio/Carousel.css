@@ -1,5 +1,5 @@
 .carousel-image {
-  height: 50vh;
+  max-height: 70vh;
 }
 
 .carousel {

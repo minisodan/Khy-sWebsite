@@ -1,6 +1,7 @@
 import Masonry from "react-masonry-css";
 import NavBar from "../Navigation/NavBar";
 import ImageCarousel from "./Carousel";
+import { useState } from "react";
 
 const metadata = require("./search.json");
 
@@ -11,9 +12,27 @@ const Portfolio = () => {
     700: 1,
   };
 
+  const [carouselOpen, setCarouselOpen] = useState(false);
+  const [carouselImage, setCarouselImage] = useState(0);
+
+  const openCarousel = (index) => {
+    setCarouselOpen(true);
+    setCarouselImage(index);
+  };
+
+  const closeCarousel = () => {
+    setCarouselOpen(false);
+  };
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
-      <ImageCarousel imageMetadata={metadata}></ImageCarousel>
+      {carouselOpen ? (
+        <ImageCarousel
+          imageMetadata={metadata}
+          clickClose={closeCarousel}
+          initialSlide={carouselImage}
+        ></ImageCarousel>
+      ) : undefined}
 
       <NavBar />
 
@@ -37,11 +56,13 @@ const Portfolio = () => {
           >
             {metadata.map((entry, index) => (
               <div key={index}>
-                <img
-                  src={`Images/search/${entry.name}`}
-                  alt={entry.description}
-                  className="w-full"
-                />
+                <button onClick={() => openCarousel(index)}>
+                  <img
+                    src={`Images/search/${entry.name}`}
+                    alt={entry.description}
+                    className="w-full"
+                  />
+                </button>
               </div>
             ))}
           </Masonry>
