@@ -20,7 +20,7 @@ const Portfolio = () => {
   const [filterOpen, setFilterOpen] = useState(false); // State for filter visibility
   const [filterWidth, setFilterWidth] = useState(0); // State for filter width
   const [currentFilter, setCurrentFilter] = useState({
-    categories: ["People", "Landscapes", "Buildings", "Nature", "Other"],
+    categories: [],
     country: "",
     fromDate: "",
     toDate: "",
@@ -56,9 +56,11 @@ const Portfolio = () => {
             : true;
 
         const filterByCategory = () =>
-          searchFilter.categories.some((category) =>
-            image.categories.includes(category)
-          );
+          searchFilter.categories.length !== 0
+            ? searchFilter.categories.some((category) =>
+                image.categories.includes(category)
+              )
+            : true;
 
         const filterByLocation = () =>
           searchFilter.state
