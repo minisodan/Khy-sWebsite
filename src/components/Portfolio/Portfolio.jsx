@@ -2,7 +2,7 @@ import Masonry from "react-masonry-css";
 import NavBar from "../Navigation/NavBar";
 import ImageCarousel from "./Carousel";
 import Filter from "./Filter"; // Import the Filter component
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Fuse from "fuse.js";
 
 const FULL_METADATA = require("./search.json");
@@ -37,7 +37,7 @@ const Portfolio = () => {
     keys: ["description"],
   });
 
-  const filterImages = (filter, search) => {
+  const filterImages = useCallback((filter, search) => {
     const searchFilter = filter ?? currentFilter;
     const searchString = search ?? searchText;
 
@@ -88,9 +88,9 @@ const Portfolio = () => {
         );
       })
     );
-  };
+  }, [currentFilter, searchText, fuse]);
 
-  const resetImages = () => {
+  const resetImages = useCallback(() => {
     filterImages(
       {
         categories: [],
@@ -102,7 +102,7 @@ const Portfolio = () => {
       },
       undefined
     );
-  };
+  }, [filterImages]);
 
   useEffect(() => {
     if (searchBarRef.current) {
@@ -115,9 +115,9 @@ const Portfolio = () => {
     setCarouselImage(index);
   };
 
-  const closeCarousel = () => {
+  const closeCarousel = useCallback(() => {
     setCarouselOpen(false);
-  };
+  }, []);
 
   const toggleFilter = () => {
     setFilterOpen((prev) => !prev);
