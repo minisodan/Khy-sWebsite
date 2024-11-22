@@ -1,19 +1,40 @@
 import Masonry from "react-masonry-css";
 import NavBar from "../Navigation/NavBar";
-
+import ImageCarousel from "./Carousel";
+import { useState } from "react";
 
 const metadata = require("./search.json");
 
-const Portfolio = () => { 
-
+const Portfolio = () => {
   const breakpointColumnsObj = {
     default: 3,
     1100: 3,
-    700: 1,
+    700: 2, // Show 2 columns for medium screens
+    500: 1, // Show 1 column for small screens
   };
 
-    return (
+  const [carouselOpen, setCarouselOpen] = useState(false);
+  const [carouselImage, setCarouselImage] = useState(0);
+
+  const openCarousel = (index) => {
+    setCarouselOpen(true);
+    setCarouselImage(index);
+  };
+
+  const closeCarousel = () => {
+    setCarouselOpen(false);
+  };
+
+  return (
     <div className="flex flex-col md:flex-row min-h-screen">
+      {carouselOpen ? (
+        <ImageCarousel
+          imageMetadata={metadata}
+          clickClose={closeCarousel}
+          initialSlide={carouselImage}
+        ></ImageCarousel>
+      ) : undefined}
+
       <NavBar />
 
       <div className="ml-0 md:ml-44 w-full flex flex-col gap-2 p-3 animate-fade-in-up">
@@ -30,13 +51,19 @@ const Portfolio = () => {
         </div>
         <div className="border-solid border-2 border-zinc-50 p-1">
           <Masonry
-            breakpointCols={breakpointColumnsObj}zinc
-            className="my-masonry-grid bg-slate-800"
-            columnClassName="my-masonry-grid_column"
+            breakpointCols={breakpointColumnsObj}
+            className="flex gap-x-1.5 bg-slate-800"
+            columnClassName="flex flex-col"
           >
             {metadata.map((entry, index) => (
               <div key={index}>
-                <img src={`Images/search/${entry.name}`} alt={entry.description} className="w-full" />
+                <button onClick={() => openCarousel(index)}>
+                  <img
+                    src={`Images/search/${entry.name}`}
+                    alt={entry.description}
+                    className="w-full h-auto"
+                  />
+                </button>
               </div>
             ))}
           </Masonry>
@@ -44,6 +71,6 @@ const Portfolio = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Portfolio;
