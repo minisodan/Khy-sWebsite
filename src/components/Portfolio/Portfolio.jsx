@@ -1,7 +1,8 @@
 import Masonry from "react-masonry-css";
 import NavBar from "../Navigation/NavBar";
 import ImageCarousel from "./Carousel";
-import { useState } from "react";
+import Filter from "./Filter"; // Import the Filter component
+import { useState, useRef, useEffect } from "react";
 
 const metadata = require("./search.json");
 
@@ -15,6 +16,16 @@ const Portfolio = () => {
 
   const [carouselOpen, setCarouselOpen] = useState(false);
   const [carouselImage, setCarouselImage] = useState(0);
+  const [filterOpen, setFilterOpen] = useState(false); // State for filter visibility
+  const [filterWidth, setFilterWidth] = useState(0); // State for filter width
+
+  const searchBarRef = useRef(null);
+
+  useEffect(() => {
+    if (searchBarRef.current) {
+      setFilterWidth(searchBarRef.current.offsetWidth);
+    }
+  }, [filterOpen]);
 
   const openCarousel = (index) => {
     setCarouselOpen(true);
@@ -25,30 +36,40 @@ const Portfolio = () => {
     setCarouselOpen(false);
   };
 
+  const toggleFilter = () => {
+    setFilterOpen((prev) => !prev);
+  };
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
-      {carouselOpen ? (
+      {carouselOpen && (
         <ImageCarousel
           imageMetadata={metadata}
           clickClose={closeCarousel}
           initialSlide={carouselImage}
-        ></ImageCarousel>
-      ) : undefined}
+        />
+      )}
 
       <NavBar />
 
       <div className="ml-0 md:ml-44 w-full flex flex-col gap-2 p-3 animate-fade-in-up">
-        <div className="flex p-1 border-2">
-          <button className="border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300">
+        <div className="flex p-1 border-2 relative">
+          <button
+            onClick={toggleFilter} // Toggle the filter pop-out
+            className="border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
+          >
             ≣
           </button>
           <input
+            ref={searchBarRef}
             className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
+          {filterOpen && <Filter width={filterWidth} />} {/* Pass the width to the Filter component */}
         </div>
+
         <div className="border-solid border-2 border-zinc-50 p-1">
           <Masonry
             breakpointCols={breakpointColumnsObj}

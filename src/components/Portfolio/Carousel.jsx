@@ -9,7 +9,7 @@ const ImageCarousel = ({ imageMetadata, clickClose, initialSlide }) => {
     initialSlide: initialSlide,
     responsive: [
       {
-        breakpoint: 768, // Mobile devices
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
