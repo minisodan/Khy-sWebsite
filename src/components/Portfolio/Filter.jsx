@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Filter = ({ filter, width, onFilterConfirm }) => {
+const Filter = ({ filter, width, onFilterConfirm, onResetConfirm }) => {
   const [categories, setCategories] = useState(filter.categories);
   const [fromDate, setFromDate] = useState(filter.fromDate);
   const [toDate, setToDate] = useState(filter.toDate);
@@ -27,6 +27,10 @@ const Filter = ({ filter, width, onFilterConfirm }) => {
     });
   };
 
+  const confirmReset = () => {
+    onResetConfirm();
+  };
+
   return (
     <div
       className="absolute top-full right-0 mt-2 bg-white shadow-lg p-4 z-50"
@@ -35,18 +39,20 @@ const Filter = ({ filter, width, onFilterConfirm }) => {
       <h2 className="text-2xl font-bold mb-4">Filters</h2>
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Categories</h3>
-        {["People", "Landscapes", "Buildings", "Nature", "Other"].map((category) => (
-          <label key={category} className="block mb-2">
-            <input
-              type="checkbox"
-              value={category}
-              checked={categories.includes(category)}
-              onChange={() => handleCategoryChange(category)}
-              className="mr-2"
-            />
-            {category}
-          </label>
-        ))}
+        {["People", "Landscapes", "Buildings", "Nature", "Other"].map(
+          (category) => (
+            <label key={category} className="block mb-2">
+              <input
+                type="checkbox"
+                value={category}
+                checked={categories.includes(category)}
+                onChange={() => handleCategoryChange(category)}
+                className="mr-2"
+              />
+              {category}
+            </label>
+          )
+        )}
       </div>
       <div className="mb-4">
         <label className="block mb-2">
@@ -106,12 +112,20 @@ const Filter = ({ filter, width, onFilterConfirm }) => {
           />
         </label>
       </div>
-      <button
-        className="w-full border-2 border-slate-800 my-2 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300 text-lg"
-        onClick={confirmFilter}
-      >
-        Apply Filters
-      </button>
+      <div className="flex gap-2">
+        <button
+          className="w-full border-2 border-slate-800 my-2 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300 text-lg"
+          onClick={confirmFilter}
+        >
+          Apply Filters
+        </button>
+        <button
+          className="w-full border-2 border-slate-800 my-2 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300 text-lg"
+          onClick={confirmReset}
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 };

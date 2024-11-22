@@ -90,6 +90,20 @@ const Portfolio = () => {
     );
   };
 
+  const resetImages = () => {
+    filterImages(
+      {
+        categories: [],
+        country: "",
+        fromDate: "",
+        toDate: "",
+        people: "",
+        state: "",
+      },
+      undefined
+    );
+  };
+
   useEffect(() => {
     if (searchBarRef.current) {
       setFilterWidth(searchBarRef.current.offsetWidth);
@@ -131,6 +145,7 @@ const Portfolio = () => {
           </button>
           <input
             ref={searchBarRef}
+            value={searchText}
             className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
             type="search"
             placeholder="Search"
@@ -140,11 +155,27 @@ const Portfolio = () => {
               filterImages(undefined, e.target.value);
             }}
           />
+          <button
+            onClick={() => {
+              setSearchText("");
+              filterImages(undefined, "");
+            }} // Toggle the filter pop-out
+            className="border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
+          >
+            X
+          </button>
           {filterOpen && (
             <Filter
               filter={currentFilter}
               width={filterWidth}
-              onFilterConfirm={filterImages}
+              onFilterConfirm={(filter) => {
+                filterImages(filter, undefined);
+                setFilterOpen(false);
+              }}
+              onResetConfirm={() => {
+                resetImages();
+                setFilterOpen(false);
+              }}
             />
           )}{" "}
           {/* Pass the width to the Filter component */}
