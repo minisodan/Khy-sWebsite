@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Filter = ({ width }) => {
-  const [categories, setCategories] = useState([]);
-  const [owner, setOwner] = useState('');
-  const [fromDate, setFromDate] = useState('');
-  const [toDate, setToDate] = useState('');
-  const [people, setPeople] = useState('');
-  const [state, setState] = useState('');
-  const [country, setCountry] = useState('');
-  const [isLandscape, setIsLandscape] = useState(false);
+const Filter = ({ filter, width, onFilterConfirm }) => {
+  const [categories, setCategories] = useState(filter.categories);
+  const [fromDate, setFromDate] = useState(filter.fromDate);
+  const [toDate, setToDate] = useState(filter.toDate);
+  const [people, setPeople] = useState(filter.people);
+  const [state, setState] = useState(filter.state);
+  const [country, setCountry] = useState(filter.country);
 
   const handleCategoryChange = (category) => {
     setCategories((prev) =>
@@ -18,12 +16,26 @@ const Filter = ({ width }) => {
     );
   };
 
+  const confirmFilter = () => {
+    onFilterConfirm({
+      categories,
+      fromDate,
+      toDate,
+      people,
+      state,
+      country,
+    });
+  };
+
   return (
-    <div className="absolute top-full right-0 mt-2 bg-white shadow-lg p-4 z-50" style={{ width: width }}>
+    <div
+      className="absolute top-full right-0 mt-2 bg-white shadow-lg p-4 z-50"
+      style={{ width: width }}
+    >
       <h2 className="text-2xl font-bold mb-4">Filters</h2>
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Categories</h3>
-        {['People', 'Landscapes', 'Buildings', 'Nature'].map((category) => (
+        {["People", "Landscapes", "Buildings", "Nature", "Other"].map((category) => (
           <label key={category} className="block mb-2">
             <input
               type="checkbox"
@@ -96,7 +108,7 @@ const Filter = ({ width }) => {
       </div>
       <button
         className="w-full border-2 border-slate-800 my-2 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300 text-lg"
-        onClick={() => console.log({ categories, owner, fromDate, toDate, people, state, country, isLandscape })}
+        onClick={confirmFilter}
       >
         Apply Filters
       </button>

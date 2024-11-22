@@ -1,202 +1,222 @@
 [
-    {
-        "name": "1.jpg",
-        "description": "light in abandon building",
-        "people": 0,
-        "location": {
-            "state": "New York",
-            "country": "USA"
-        },
-        "isLandscape": false
+  {
+    "name": "1.jpg",
+    "date": "01/01/2000",
+    "description": "light in abandon building",
+    "people": 0,
+    "location": {
+      "state": "New York",
+      "country": "USA"
     },
-    {
-        "name": "2.jpg",
-        "description": "person sitting at table",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["Other"]
+  },
+  {
+    "name": "2.jpg",
+    "date": "01/01/2001",
+    "description": "person sitting at table",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "3.jpg",
-        "description": "flowers",
-        "people": 0,
-        "location": {
-            "state": "New York",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["People"]
+  },
+  {
+    "name": "3.jpg",
+    "date": "01/01/2002",
+    "description": "flowers",
+    "people": 0,
+    "location": {
+      "state": "New York",
+      "country": "USA"
     },
-    {
-        "name": "4.jpg",
-        "description": "guy in house playing video games",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["Nature"]
+  },
+  {
+    "name": "4.jpg",
+    "date": "01/01/2003",
+    "description": "guy in house playing video games",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "5.jpg",
-        "description": "landscape of buildings in New York City",
-        "people": 0,
-        "location": {
-            "state": "New York",
-            "country": "USA"
-        },
-        "isLandscape": true
+    "categories": ["People"]
+  },
+  {
+    "name": "5.jpg",
+    "date": "01/01/2004",
+    "description": "landscape of buildings in New York City",
+    "people": 0,
+    "location": {
+      "state": "New York",
+      "country": "USA"
     },
-    {
-        "name": "6.jpg",
-        "description": "Tyler, the Creator. Kali Uchis",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "6.jpg",
+    "date": "01/01/2005",
+    "description": "Tyler, the Creator. Kali Uchis",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "7.jpg",
-        "description": "Night Landscape",
-        "people": 0,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": true
+    "categories": ["People"]
+  },
+  {
+    "name": "7.jpg",
+    "date": "01/01/2006",
+    "description": "Night Landscape",
+    "people": 0,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "8.jpg",
-        "description": "Flowers",
-        "people": 0,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "8.jpg",
+    "date": "01/01/2007",
+    "description": "Flowers",
+    "people": 0,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "9.jpg",
-        "description": "Tyler, the Creator. Concert",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["Nature"]
+  },
+  {
+    "name": "9.jpg",
+    "date": "01/01/2008",
+    "description": "Tyler, the Creator. Concert",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "10.jpg",
-        "description": "Tyler, the Creator. Vince Staples",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["People"]
+  },
+  {
+    "name": "10.jpg",
+    "date": "01/01/2009",
+    "description": "Tyler, the Creator. Vince Staples",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "11.jpg",
-        "description": "Tyler, the Creator. Concert",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["People"]
+  },
+  {
+    "name": "11.jpg",
+    "date": "01/01/2010",
+    "description": "Tyler, the Creator. Concert",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "12.jpg",
-        "description": "store at night time",
-        "people": 0,
-        "location": {
-            "state": "California",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["People", "Buildings"]
+  },
+  {
+    "name": "12.jpg",
+    "date": "01/01/2011",
+    "description": "store at night time",
+    "people": 0,
+    "location": {
+      "state": "California",
+      "country": "USA"
     },
-    {
-        "name": "13.jpg",
-        "description": "Puma store in New York City",
-        "people": 1,
-        "location": {
-            "state": "New York",
-            "country": "USA"
-        },
-        "isLandscape": true
+    "categories": ["Buildings"]
+  },
+  {
+    "name": "13.jpg",
+    "date": "01/01/2012",
+    "description": "Puma store in New York City",
+    "people": 1,
+    "location": {
+      "state": "New York",
+      "country": "USA"
     },
-    {
-        "name": "14.jpg",
-        "description": "Tyler, the Creator. Vince Staples",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["Landscapes", "Buildings", "People"]
+  },
+  {
+    "name": "14.jpg",
+    "date": "01/01/2013",
+    "description": "Tyler, the Creator. Vince Staples",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "15.jpg",
-        "description": "Stores in New York on the street",
-        "people": 11,
-        "location": {
-            "state": "New York",
-            "country": "USA"
-        },
-        "isLandscape": true
+    "categories": ["People"]
+  },
+  {
+    "name": "15.jpg",
+    "date": "01/01/2014",
+    "description": "Stores in New York on the street",
+    "people": 11,
+    "location": {
+      "state": "New York",
+      "country": "USA"
     },
-    {
-        "name": "16.jpg",
-        "description": "neighborhood",
-        "people": 0,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": true
+    "categories": ["Landscapes", "People", "Buildings", "Nature"]
+  },
+  {
+    "name": "16.jpg",
+    "date": "01/01/2015",
+    "description": "neighborhood",
+    "people": 0,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "17.jpg",
-        "description": "neighborhood",
-        "people": 0,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": true
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "17.jpg",
+    "date": "01/01/2016",
+    "description": "neighborhood",
+    "people": 0,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "18.jpg",
-        "description": "New York train",
-        "people": 11,
-        "location": {
-            "state": "New York",
-            "country": "USA"
-        },
-        "isLandscape": true
+    "categories": ["Landscapes", "Buildings", "Nature"]
+  },
+  {
+    "name": "18.jpg",
+    "date": "01/01/2017",
+    "description": "New York train",
+    "people": 11,
+    "location": {
+      "state": "New York",
+      "country": "USA"
     },
-    {
-        "name": "19.jpg",
-        "description": "Tyler, the Creator. Concert",
-        "people": 1,
-        "location": {
-            "state": "Minnesota",
-            "country": "USA"
-        },
-        "isLandscape": false
+    "categories": ["Landscapes", "People"]
+  },
+  {
+    "name": "19.jpg",
+    "date": "01/01/2018",
+    "description": "Tyler, the Creator. Concert",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
     },
-    {
-        "name": "20.jpg",
-        "description": "man in store, pricing",
-        "people": 2,
-        "location": {
-            "state": "Louisiana",
-            "country": "USA"
-        },
-        "isLandscape": false
-    }
+    "categories": ["People"]
+  },
+  {
+    "name": "20.jpg",
+    "date": "01/01/2019",
+    "description": "man in store, pricing",
+    "people": 2,
+    "location": {
+      "state": "Louisiana",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  }
 ]

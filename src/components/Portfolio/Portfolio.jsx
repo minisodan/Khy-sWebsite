@@ -3,8 +3,9 @@ import NavBar from "../Navigation/NavBar";
 import ImageCarousel from "./Carousel";
 import Filter from "./Filter"; // Import the Filter component
 import { useState, useRef, useEffect } from "react";
+import Fuse from "fuse.js";
 
-const metadata = require("./search.json");
+const FULL_METADATA = require("./search.json");
 
 const Portfolio = () => {
   const breakpointColumnsObj = {
@@ -18,8 +19,74 @@ const Portfolio = () => {
   const [carouselImage, setCarouselImage] = useState(0);
   const [filterOpen, setFilterOpen] = useState(false); // State for filter visibility
   const [filterWidth, setFilterWidth] = useState(0); // State for filter width
+  const [currentFilter, setCurrentFilter] = useState({
+    categories: ["People", "Landscapes", "Buildings", "Nature", "Other"],
+    country: "",
+    fromDate: "",
+    toDate: "",
+    people: "",
+    state: "",
+  });
+  const [metadata, setMetadata] = useState(FULL_METADATA);
 
   const searchBarRef = useRef(null);
+  const [searchText, setSearchText] = useState("");
+  const fuse = new Fuse(FULL_METADATA, {
+    ignoreLocation: true,
+    threshold: 0.4,
+    keys: ["description"],
+  });
+
+  const filterImages = (filter, search) => {
+    const searchFilter = filter ?? currentFilter;
+    const searchString = search ?? searchText;
+
+    setCurrentFilter(searchFilter);
+
+    let searchFilteredMetadata =
+      searchString !== ""
+        ? fuse.search(search ?? searchText).map((it) => it.item)
+        : FULL_METADATA;
+
+    setMetadata(
+      searchFilteredMetadata.filter((image) => {
+        const filterByPeople = () =>
+          searchFilter.people
+            ? image.people === Number(searchFilter.people)
+            : true;
+
+        const filterByCategory = () =>
+          searchFilter.categories.some((category) =>
+            image.categories.includes(category)
+          );
+
+        const filterByLocation = () =>
+          searchFilter.state
+            ? image.location.state === searchFilter.state
+            : true && searchFilter.country
+            ? image.location.country === searchFilter.country
+            : true;
+
+        let filterFromDate = searchFilter.fromDate
+          ? new Date(searchFilter.fromDate)
+          : new Date("01/01/1900");
+        let filterToDate = searchFilter.toDate
+          ? new Date(searchFilter.toDate)
+          : new Date();
+        let imageDate = new Date(image.date);
+
+        const filterByDate = () =>
+          imageDate >= filterFromDate && imageDate <= filterToDate;
+
+        return (
+          filterByPeople() &&
+          filterByCategory() &&
+          filterByLocation() &&
+          filterByDate()
+        );
+      })
+    );
+  };
 
   useEffect(() => {
     if (searchBarRef.current) {
@@ -66,8 +133,19 @@ const Portfolio = () => {
             type="search"
             placeholder="Search"
             aria-label="Search"
+            onChange={(e) => {
+              setSearchText(e.target.value);
+              filterImages(undefined, e.target.value);
+            }}
           />
-          {filterOpen && <Filter width={filterWidth} />} {/* Pass the width to the Filter component */}
+          {filterOpen && (
+            <Filter
+              filter={currentFilter}
+              width={filterWidth}
+              onFilterConfirm={filterImages}
+            />
+          )}{" "}
+          {/* Pass the width to the Filter component */}
         </div>
 
         <div className="border-solid border-2 border-zinc-50 p-1">
