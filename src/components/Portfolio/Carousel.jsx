@@ -7,26 +7,50 @@ const ImageCarousel = ({ imageMetadata, clickClose, initialSlide }) => {
     centerMode: true,
     infinite: true,
     initialSlide: initialSlide,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+    ],
   };
+
   return (
-    <div className="fixed w-screen p-2 h-screen z-10 bg-opacity-90 bg-slate-800 ">
-      <button
-        className="w-full border-2 border-slate-800 my-2 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
-        onClick={clickClose}
-      >
-        Close
-      </button>
-      <div className="flex justify-center">
-        <Slider {...settings} className="carousel">
+    <div
+      className="fixed w-screen h-screen p-2 z-10 bg-opacity-90 bg-slate-800 flex items-center justify-center"
+      onClick={clickClose}
+    >
+      <div className="flex justify-center items-center h-full w-full">
+        <Slider
+          {...settings}
+          className="carousel"
+          onClick={(e) => e.stopPropagation()}
+        >
           {imageMetadata.map((entry, index) => (
             <div key={index} className="text-center">
-              <div className="md:mx-20 h-screen flex flex-col items-center justify-center">
+              <div className="md:mx-20 mt-60 md:mt-0 h-full flex flex-col items-center justify-center">
                 <img
                   src={`Images/search/${entry.name}`}
                   alt={entry.description}
-                  className="carousel-image"
+                  className="carousel-image border-2 border-zinc-50 p-1"
                 />
-                <p className="text-zinc-50">{entry.description}</p>
+                <div className="bg-white p-6 mt-3 flex flex-col justify-between w-full max-w-lg border-2 border-zinc-50">
+                  <p className="text-gray-700 text-xl text-center">
+                    Description of image: {entry.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
