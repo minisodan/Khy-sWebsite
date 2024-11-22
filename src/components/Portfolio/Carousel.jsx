@@ -40,7 +40,7 @@ const ImageCarousel = ({ imageMetadata, clickClose, initialSlide }) => {
         >
           {imageMetadata.map((entry, index) => (
             <div key={index} className="text-center">
-              <div className="md:mx-20 mt-60 md:mt-0 h-full flex flex-col items-center justify-center">
+              <div className="md:mx-20 md:mt-0 h-full flex flex-col items-center justify-center">
                 <img
                   src={`Images/search/${entry.name}`}
                   alt={entry.description}
