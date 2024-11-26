@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Footer from "../Navigation/Footer";
 import Instagram from "../SVG/Instagram";
 import Twitter from "../SVG/Twitter";
@@ -8,6 +10,53 @@ import SVGWrapper from "../SVG/SVGWrapper";
 import NavBar from "../Navigation/NavBar";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    email: '',
+    name: '',
+    subject: '',
+    message: '',
+  });
+
+  const [isSending, setIsSending] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    emailjs
+      .sendForm(
+        'service_uopgtaq',
+        'template_fxmd34e',
+        e.target, 
+        'pO8ukJSDKrDmXM9ap'
+      )
+      .then(
+        (result) => {
+          setIsSending(false);
+          setSuccessMessage('Your message has been sent successfully!');
+          setFormData({
+            email: '',
+            name: '',
+            subject: '',
+            message: '', 
+          });
+        },
+        (error) => {
+          setIsSending(false);
+          setErrorMessage('There was an error sending your message. Please try again.');
+        }
+      );
+  };
+
   return (
     <div className="flex flex-col md:min-h-screen">
       {/* Full-width NavBar */}
@@ -75,34 +124,58 @@ function Contact() {
           {/* E-Mail Section */}
           <div className="bg-zinc-50 flex flex-col text-center">
             <h2 className="p-2 text-2xl uppercase">E-Mail</h2>
-            <div className="flex flex-col gap-4 p-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4">
               <input
+                name="email"
                 className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
                 type="email"
                 placeholder="E-Mail"
-                aria-label="E-Mail"
+                value={formData.email}
+                onChange={handleChange}
+                required
               />
               <input
+                name="name"
                 className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
                 type="text"
                 placeholder="Name"
-                aria-label="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
               />
               <input
+                name="subject"
                 className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
                 type="text"
                 placeholder="Subject"
-                aria-label="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
               />
               <textarea
+                name="message"
                 className="resize-none border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800 h-40"
                 placeholder="Message"
-                aria-label="Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
               />
-              <button className="w-full border-2 border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300">
-                SEND
+              <button
+                type="submit"
+                className="w-full border-2 border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
+                disabled={isSending}
+              >
+                {isSending ? 'Sending...' : 'SEND'}
               </button>
-            </div>
+            </form>
+
+            {/* Success or Error Message */}
+            {successMessage && (
+              <p className="text-green-500 mt-4">{successMessage}</p>
+            )}
+            {errorMessage && (
+              <p className="text-red-500 mt-4">{errorMessage}</p>
+            )}
           </div>
 
           <Footer />
