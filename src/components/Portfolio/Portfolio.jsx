@@ -37,58 +37,61 @@ const Portfolio = () => {
     keys: ["description"],
   });
 
-  const filterImages = useCallback((filter, search) => {
-    const searchFilter = filter ?? currentFilter;
-    const searchString = search ?? searchText;
+  const filterImages = useCallback(
+    (filter, search) => {
+      const searchFilter = filter ?? currentFilter;
+      const searchString = search ?? searchText;
 
-    setCurrentFilter(searchFilter);
+      setCurrentFilter(searchFilter);
 
-    let searchFilteredMetadata =
-      searchString !== ""
-        ? fuse.search(search ?? searchText).map((it) => it.item)
-        : FULL_METADATA;
+      let searchFilteredMetadata =
+        searchString !== ""
+          ? fuse.search(search ?? searchText).map((it) => it.item)
+          : FULL_METADATA;
 
-    setMetadata(
-      searchFilteredMetadata.filter((image) => {
-        const filterByPeople = () =>
-          searchFilter.people
-            ? image.people === Number(searchFilter.people)
-            : true;
+      setMetadata(
+        searchFilteredMetadata.filter((image) => {
+          const filterByPeople = () =>
+            searchFilter.people
+              ? image.people === Number(searchFilter.people)
+              : true;
 
-        const filterByCategory = () =>
-          searchFilter.categories.length !== 0
-            ? searchFilter.categories.some((category) =>
-                image.categories.includes(category)
-              )
-            : true;
+          const filterByCategory = () =>
+            searchFilter.categories.length !== 0
+              ? searchFilter.categories.some((category) =>
+                  image.categories.includes(category)
+                )
+              : true;
 
-        const filterByLocation = () =>
-          searchFilter.state
-            ? image.location.state === searchFilter.state
-            : true && searchFilter.country
-            ? image.location.country === searchFilter.country
-            : true;
+          const filterByLocation = () =>
+            searchFilter.state
+              ? image.location.state === searchFilter.state
+              : true && searchFilter.country
+              ? image.location.country === searchFilter.country
+              : true;
 
-        let filterFromDate = searchFilter.fromDate
-          ? new Date(searchFilter.fromDate)
-          : new Date("01/01/1900");
-        let filterToDate = searchFilter.toDate
-          ? new Date(searchFilter.toDate)
-          : new Date();
-        let imageDate = new Date(image.date);
+          let filterFromDate = searchFilter.fromDate
+            ? new Date(searchFilter.fromDate)
+            : new Date("01/01/1900");
+          let filterToDate = searchFilter.toDate
+            ? new Date(searchFilter.toDate)
+            : new Date();
+          let imageDate = new Date(image.date);
 
-        const filterByDate = () =>
-          imageDate >= filterFromDate && imageDate <= filterToDate;
+          const filterByDate = () =>
+            imageDate >= filterFromDate && imageDate <= filterToDate;
 
-        return (
-          filterByPeople() &&
-          filterByCategory() &&
-          filterByLocation() &&
-          filterByDate()
-        );
-      })
-    );
-  }, [currentFilter, searchText, fuse]);
+          return (
+            filterByPeople() &&
+            filterByCategory() &&
+            filterByLocation() &&
+            filterByDate()
+          );
+        })
+      );
+    },
+    [currentFilter, searchText, fuse]
+  );
 
   const resetImages = useCallback(() => {
     filterImages(

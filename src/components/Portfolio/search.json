@@ -1,20 +1,31 @@
 [
   {
     "name": "1.jpg",
-    "date": "01/01/2000",
-    "description": "light in abandon building",
+    "date": "06/20/2022",
+    "description": "Photo of Khyron/creator",
+    "people": 1,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "2.jpg",
+    "date": "11/13/2022",
+    "description": "Photo of a cell phone tower, near Mankato State University in Minnesota",
     "people": 0,
     "location": {
-      "state": "New York",
+      "state": "Minnesota",
       "country": "USA"
     },
     "categories": ["Other"]
   },
   {
-    "name": "2.jpg",
-    "date": "01/01/2001",
-    "description": "person sitting at table",
-    "people": 1,
+    "name": "3.jpg",
+    "date": "09/15/2022",
+    "description": "Photo of Khyron/creator",
+    "people": 0,
     "location": {
       "state": "Minnesota",
       "country": "USA"
@@ -22,21 +33,10 @@
     "categories": ["People"]
   },
   {
-    "name": "3.jpg",
-    "date": "01/01/2002",
-    "description": "flowers",
-    "people": 0,
-    "location": {
-      "state": "New York",
-      "country": "USA"
-    },
-    "categories": ["Nature"]
-  },
-  {
     "name": "4.jpg",
-    "date": "01/01/2003",
-    "description": "guy in house playing video games",
-    "people": 1,
+    "date": "10/10/2022",
+    "description": "House party with a bunch random people",
+    "people": 10,
     "location": {
       "state": "Minnesota",
       "country": "USA"
@@ -45,19 +45,19 @@
   },
   {
     "name": "5.jpg",
-    "date": "01/01/2004",
-    "description": "landscape of buildings in New York City",
-    "people": 0,
+    "date": "10/10/2022",
+    "description": "House party with a Khyron's friend",
+    "people": 10,
     "location": {
-      "state": "New York",
+      "state": "Minnesota",
       "country": "USA"
     },
-    "categories": ["Landscapes", "Buildings"]
+    "categories": ["People"]
   },
   {
     "name": "6.jpg",
-    "date": "01/01/2005",
-    "description": "Tyler, the Creator. Kali Uchis",
+    "date": "05/09/2021",
+    "description": "Adam/Palloe at a park",
     "people": 1,
     "location": {
       "state": "Minnesota",
@@ -67,8 +67,8 @@
   },
   {
     "name": "7.jpg",
-    "date": "01/01/2006",
-    "description": "Night Landscape",
+    "date": "05/14/2022",
+    "description": "Photo of power lines in Downtown Minneapolis,MN",
     "people": 0,
     "location": {
       "state": "Minnesota",
@@ -78,41 +78,30 @@
   },
   {
     "name": "8.jpg",
-    "date": "01/01/2007",
-    "description": "Flowers",
-    "people": 0,
+    "date": "01/31/2020",
+    "description": "Man buying something at a store during Covid 19 from Khyron's cousin",
+    "people": 2,
     "location": {
-      "state": "Minnesota",
+      "state": "Louisiana",
       "country": "USA"
     },
-    "categories": ["Nature"]
+    "categories": ["People"]
   },
   {
     "name": "9.jpg",
-    "date": "01/01/2008",
-    "description": "Tyler, the Creator. Concert",
+    "date": "04/04/2022",
+    "description": "Photo of women in the studio during photo shoot",
     "people": 1,
     "location": {
       "state": "Minnesota",
       "country": "USA"
     },
-    "categories": ["People"]
+    "categories": ["People", "Landscapes"]
   },
   {
     "name": "10.jpg",
-    "date": "01/01/2009",
-    "description": "Tyler, the Creator. Vince Staples",
-    "people": 1,
-    "location": {
-      "state": "Minnesota",
-      "country": "USA"
-    },
-    "categories": ["People"]
-  },
-  {
-    "name": "11.jpg",
-    "date": "01/01/2010",
-    "description": "Tyler, the Creator. Concert",
+    "date": "06/12/2021",
+    "description": "Shuddle station at the Airport in Minnesota",
     "people": 1,
     "location": {
       "state": "Minnesota",
@@ -121,31 +110,42 @@
     "categories": ["People", "Buildings"]
   },
   {
-    "name": "12.jpg",
-    "date": "01/01/2011",
-    "description": "store at night time",
-    "people": 0,
+    "name": "11.jpg",
+    "date": "08/02/2021",
+    "description": "three guys walking in California",
+    "people": 3,
     "location": {
       "state": "California",
       "country": "USA"
     },
-    "categories": ["Buildings"]
+    "categories": ["People"]
+  },
+  {
+    "name": "12.jpg",
+    "date": "02/20/2022",
+    "description": "Tyler, the Creator. Teezo Touchdown",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
+    },
+    "categories": ["People"]
   },
   {
     "name": "13.jpg",
-    "date": "01/01/2012",
-    "description": "Puma store in New York City",
-    "people": 1,
+    "date": "05/20/2021",
+    "description": "bench in a Botanical Garden park",
+    "people": 0,
     "location": {
       "state": "New York",
       "country": "USA"
     },
-    "categories": ["Landscapes", "Buildings", "People"]
+    "categories": ["Nature", "Landscapes"]
   },
   {
     "name": "14.jpg",
-    "date": "01/01/2013",
-    "description": "Tyler, the Creator. Vince Staples",
+    "date": "02/20/2022",
+    "description": "Tyler, The Creator. Kali Uchis",
     "people": 1,
     "location": {
       "state": "Minnesota",
@@ -155,50 +155,28 @@
   },
   {
     "name": "15.jpg",
-    "date": "01/01/2014",
-    "description": "Stores in New York on the street",
-    "people": 11,
+    "date": "10/10/2022",
+    "description": "House party with a bunch random people, focal point is the three on the stairs",
+    "people": 10,
     "location": {
-      "state": "New York",
+      "state": "Minnesota",
       "country": "USA"
     },
-    "categories": ["Landscapes", "People", "Buildings", "Nature"]
+    "categories": ["People"]
   },
   {
     "name": "16.jpg",
-    "date": "01/01/2015",
-    "description": "neighborhood",
-    "people": 0,
+    "date": "04/04/2022",
+    "description": "Photo of men in the studio during photo shoot",
+    "people": 3,
     "location": {
-      "state": "Minnesota",
+      "state": "California",
       "country": "USA"
     },
-    "categories": ["Landscapes", "Buildings"]
+    "categories": ["People"]
   },
   {
-    "name": "17.jpg",
-    "date": "01/01/2016",
-    "description": "neighborhood",
-    "people": 0,
-    "location": {
-      "state": "Minnesota",
-      "country": "USA"
-    },
-    "categories": ["Landscapes", "Buildings", "Nature"]
-  },
-  {
-    "name": "18.jpg",
-    "date": "01/01/2017",
-    "description": "New York train",
-    "people": 11,
-    "location": {
-      "state": "New York",
-      "country": "USA"
-    },
-    "categories": ["Landscapes", "People"]
-  },
-  {
-    "name": "19.jpg",
+    "name": "16_5.jpg",
     "date": "01/01/2018",
     "description": "Tyler, the Creator. Concert",
     "people": 1,
@@ -209,12 +187,474 @@
     "categories": ["People"]
   },
   {
+    "name": "17.jpg",
+    "date": "08/02/2021",
+    "description": "One of the three guys walking in California",
+    "people": 1,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "18.jpg",
+    "date": "05/20/2021",
+    "description": "New York Building",
+    "people": 0,
+    "location": {
+      "state": "New York",
+      "country": "USA"
+    },
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "19.jpg",
+    "date": "06/20/2022",
+    "description": "Photo of Khyron/creator",
+    "people": 1,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
     "name": "20.jpg",
-    "date": "01/01/2019",
-    "description": "man in store, pricing",
+    "date": "01/01/2018",
+    "description": "Tyler, The Creator. Kali Uchis",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "21.jpg",
+    "date": "01/01/2018",
+    "description": "Tyler, The Creator. Kali Uchis",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "22.jpg",
+    "date": "08/02/2021",
+    "description": "One of the three guys walking in California",
+    "people": 1,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "23.jpg",
+    "date": "02/20/2022",
+    "description": "Tyler, the Creator. Vince Staples",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "24.jpg",
+    "date": "06/15/2021",
+    "description": "New York Park",
+    "people": 1,
+    "location": {
+      "state": "New York",
+      "country": "USA"
+    },
+    "categories": ["People", "Landscapes"]
+  },
+  {
+    "name": "25.jpg",
+    "date": "06/15/2021",
+    "description": "Neighborhood in Hopkins,MN",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
+    },
+    "categories": ["Buildings", "Landscapes"]
+  },
+  {
+    "name": "26.jpg",
+    "date": "06/16/2021",
+    "description": "New York Puma store",
+    "people": 1,
+    "location": {
+      "state": "New York",
+      "country": "USA"
+    },
+    "categories": ["Buildings", "Landscapes"]
+  },
+  {
+    "name": "27.jpg",
+    "date": "02/20/2022",
+    "description": "Tyler, the Creator. Vince Staples",
+    "people": 1,
+    "location": {
+      "state": "Minnesota",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "28.jpg",
+    "date": "08/02/2021",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "30.jpg",
+    "date": "05/01/2024",
+    "description": "Man unloading in a moving factory",
+    "people": 1,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "31.jpg",
+    "date": "05/02/2024",
+    "description": "Picture taken of a bus mirror, a reflection of people",
+    "people": 7,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "32.jpg",
+    "date": "05/03/2024",
+    "description": "Empty Japan street walk way",
+    "people": 0,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Buildings", "Landscapes"]
+  },
+  {
+    "name": "33.jpg",
+    "date": "05/04/2024",
+    "description": "Filled Japan street walk way",
+    "people": 10,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Buildings", "People"]
+  },
+  {
+    "name": "34.jpg",
+    "date": "05/05/2024",
+    "description": "Park in Ueno, Japan",
+    "people": 0,
+    "location": {
+      "state": "Ueno",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Nature"]
+  },
+  {
+    "name": "35.jpg",
+    "date": "05/05/2024",
+    "description": "Inners of the park in Ueno, Japan",
+    "people": 3,
+    "location": {
+      "state": "Ueno",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Nature"]
+  },
+  {
+    "name": "36.jpg",
+    "date": "05/05/2024",
+    "description": "Inners of the park in Ueno, Japan",
+    "people": 1,
+    "location": {
+      "state": "Ueno",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Nature", "People"]
+  },
+  {
+    "name": "37.jpg",
+    "date": "05/06/2024",
+    "description": "Main park in Ueno, Japan",
+    "people": 10,
+    "location": {
+      "state": "Ueno",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Nature", "People"]
+  },
+  {
+    "name": "38.jpg",
+    "date": "05/06/2024",
+    "description": "Street stores in Ueno, Japan",
+    "people": 3,
+    "location": {
+      "state": "Ueno",
+      "country": "Japan"
+    },
+    "categories": ["Buildings", "People"]
+  },
+  {
+    "name": "39.jpg",
+    "date": "05/07/2024",
+    "description": "Sign with a clock in Akihabara, Japan",
+    "people": 0,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "40.jpg",
+    "date": "05/06/2024",
+    "description": "Central park in in Ueno, Japan",
+    "people": 10,
+    "location": {
+      "state": "Ueno",
+      "country": "Japan"
+    },
+    "categories": ["People", "Nature"]
+  },
+  {
+    "name": "41.jpg",
+    "date": "05/08/2024",
+    "description": "Students in Japan",
+    "people": 10,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "42.jpg",
+    "date": "05/08/2024",
+    "description": "Flying in to Japan",
+    "people": 0,
+    "location": {
+      "state": "Unknown",
+      "country": "Japan"
+    },
+    "categories": ["Other", "Buildings", "Landscapes"]
+  },
+  {
+    "name": "43.jpg",
+    "date": "05/08/2024",
+    "description": "Ramen shop in Akihabara, Japan named 'Ifu Akihabara'",
+    "people": 7,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "44.jpg",
+    "date": "05/09/2024",
+    "description": "Night street in Akihabara, Japan",
+    "people": 10,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People", "Buildings"]
+  },
+  {
+    "name": "45.jpg",
+    "date": "05/10/2024",
+    "description": "Underpass in Akihabara",
+    "people": 3,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "46.jpg",
+    "date": "05/11/2024",
+    "description": "Night time in the city of Akihabara, Japan",
+    "people": 10,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People", "Buildings"]
+  },
+  {
+    "name": "50.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "46_5.jpg",
+    "date": "05/12/2024",
+    "description": "Aoki building in Akihabara",
+    "people": 0,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "50.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "47.jpg",
+    "date": "05/13/2024",
+    "description": "Train in Akihabara, Japan",
+    "people": 0,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Buildings"]
+  },
+  {
+    "name": "49.jpg",
+    "date": "05/14/2024",
+    "description": "Women in Japan, sitting at store",
     "people": 2,
     "location": {
-      "state": "Louisiana",
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "48.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "51.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "53.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "54.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "55.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "56.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "57.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "58.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
+      "country": "USA"
+    },
+    "categories": ["People"]
+  },
+  {
+    "name": "59.jpg",
+    "date": "04/04/2022",
+    "description": "three guys smoking in California",
+    "people": 3,
+    "location": {
+      "state": "California",
       "country": "USA"
     },
     "categories": ["People"]
