@@ -90,7 +90,7 @@ const Filter = ({ filter, width, onFilterConfirm, onResetConfirm }) => {
       </div>
       <div className="mb-4">
         <label className="block mb-2">
-          <span className="text-lg font-semibold">State:</span>
+          <span className="text-lg font-semibold">State/Japan City:</span>
           <input
             type="text"
             value={state}

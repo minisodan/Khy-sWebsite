@@ -9,7 +9,7 @@ const ImageCarousel = ({ imageMetadata, clickClose, initialSlide }) => {
     initialSlide: initialSlide,
     slidesToShow: 1, // Show only one slide at a time on mobile
     slidesToScroll: 1,
-    adaptiveHeight: true // Adjust height to fit content
+    adaptiveHeight: true, // Adjust height to fit content
   };
 
   return (
@@ -32,7 +32,7 @@ const ImageCarousel = ({ imageMetadata, clickClose, initialSlide }) => {
                 />
                 <div className="bg-white p-6 mt-3 flex flex-col justify-between w-full max-w-lg border-2 border-zinc-50 mx-auto md:mx-0">
                   <p className="text-gray-700 text-xl text-center">
-                    Description of image: {entry.description}
+                    {entry.description}
                   </p>
                 </div>
               </div>
