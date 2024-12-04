@@ -181,7 +181,6 @@ const Portfolio = () => {
               }}
             />
           )}{" "}
-          {/* Pass the width to the Filter component */}
         </div>
 
         <div className="border-solid border-2 border-zinc-50 p-1">
@@ -191,12 +190,12 @@ const Portfolio = () => {
             columnClassName="flex flex-col"
           >
             {metadata.map((entry, index) => (
-              <div key={index}>
+              <div key={index} className="overflow-hidden group">
                 <button onClick={() => openCarousel(index)}>
                   <img
                     src={`Images/search/${entry.name}`}
                     alt={entry.description}
-                    className="w-full h-auto"
+                    className="w-full h-400 transition-transform duration-300 group-hover:scale-105"
                   />
                 </button>
               </div>
