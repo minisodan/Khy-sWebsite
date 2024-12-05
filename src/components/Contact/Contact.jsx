@@ -62,7 +62,7 @@ function Contact() {
       {/* Full-width NavBar */}
       <NavBar />
       <div className="flex flex-col items-center justify-center w-full pt-10 px-4 animate-fade-in-up">
-        <div className="w-full max-w-xl flex flex-col gap-4 md:ml-44">
+        <div className="w-full max-w-3xl flex flex-col gap-4 md:mt-[5%]"> {/* Increased max width */}
           <div className="border-solid border-2 border-zinc-50 p-1">
             <div className="text-center bg-zinc-50 uppercase">
               <h1 className="text-4xl font-semibold uppercase">Contact Me</h1>
@@ -127,7 +127,7 @@ function Contact() {
             <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4">
               <input
                 name="email"
-                className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
+                className="border-2 border-gray-200 w-full py-3 px-6 leading-tight focus:outline-none focus:border-slate-800"
                 type="email"
                 placeholder="E-Mail"
                 value={formData.email}
@@ -136,7 +136,7 @@ function Contact() {
               />
               <input
                 name="name"
-                className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
+                className="border-2 border-gray-200 w-full py-3 px-6 leading-tight focus:outline-none focus:border-slate-800"
                 type="text"
                 placeholder="Name"
                 value={formData.name}
@@ -145,7 +145,7 @@ function Contact() {
               />
               <input
                 name="subject"
-                className="border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800"
+                className="border-2 border-gray-200 w-full py-3 px-6 leading-tight focus:outline-none focus:border-slate-800"
                 type="text"
                 placeholder="Subject"
                 value={formData.subject}
@@ -154,7 +154,7 @@ function Contact() {
               />
               <textarea
                 name="message"
-                className="resize-none border-2 border-gray-200 w-full py-2 px-4 leading-tight focus:outline-none focus:border-slate-800 h-40"
+                className="resize-none border-2 border-gray-200 w-full py-3 px-6 leading-tight focus:outline-none focus:border-slate-800 h-40"
                 placeholder="Message"
                 value={formData.message}
                 onChange={handleChange}
@@ -162,7 +162,7 @@ function Contact() {
               />
               <button
                 type="submit"
-                className="w-full border-2 border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
+                className="w-full border-2 border-slate-800 px-6 py-3 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
                 disabled={isSending}
               >
                 {isSending ? 'Sending...' : 'SEND'}

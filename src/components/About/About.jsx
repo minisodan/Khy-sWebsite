@@ -1,5 +1,6 @@
 import NavBar from "../Navigation/NavBar";
 import { Link } from "react-router-dom";
+import Footer from "../Navigation/Footer";
 
 function About() {
   return (
@@ -59,6 +60,7 @@ function About() {
               </button>
             </Link>
           </div>
+          <Footer />
         </div>
       </div>
     </div>

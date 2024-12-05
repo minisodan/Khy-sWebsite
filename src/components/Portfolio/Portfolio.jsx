@@ -4,6 +4,7 @@ import ImageCarousel from "./Carousel";
 import Filter from "./Filter"; // Import the Filter component
 import { useState, useRef, useEffect, useCallback } from "react";
 import Fuse from "fuse.js";
+import Footer from "../Navigation/Footer";
 
 const FULL_METADATA = require("./search.json");
 
@@ -202,6 +203,7 @@ const Portfolio = () => {
             ))}
           </Masonry>
         </div>
+        <Footer />
       </div>
     </div>
   );
