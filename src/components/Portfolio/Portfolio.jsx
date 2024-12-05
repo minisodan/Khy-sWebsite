@@ -9,8 +9,8 @@ const FULL_METADATA = require("./search.json");
 
 const Portfolio = () => {
   const breakpointColumnsObj = {
-    default: 3,
-    1100: 3,
+    default: 4,
+    1920: 3,
     700: 2, // Show 2 columns for medium screens
     500: 1, // Show 1 column for small screens
   };
