@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import Footer from "../Navigation/Footer";
 import Instagram from "../SVG/Instagram";
 import Twitter from "../SVG/Twitter";
@@ -8,18 +8,19 @@ import Youtube from "../SVG/Youtube";
 import TikTok from "../SVG/TikTok";
 import SVGWrapper from "../SVG/SVGWrapper";
 import NavBar from "../Navigation/NavBar";
+import useNavigationHotkeys from "../../Hooks/useNavigationHotkeys";
 
 function Contact() {
   const [formData, setFormData] = useState({
-    email: '',
-    name: '',
-    subject: '',
-    message: '',
+    email: "",
+    name: "",
+    subject: "",
+    message: "",
   });
 
   const [isSending, setIsSending] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,41 +35,46 @@ function Contact() {
     setIsSending(true);
     emailjs
       .sendForm(
-        'service_uopgtaq',
-        'template_fxmd34e',
-        e.target, 
-        'pO8ukJSDKrDmXM9ap'
+        "service_uopgtaq",
+        "template_fxmd34e",
+        e.target,
+        "pO8ukJSDKrDmXM9ap"
       )
       .then(
         (result) => {
           setIsSending(false);
-          setSuccessMessage('Your message has been sent successfully!');
+          setSuccessMessage("Your message has been sent successfully!");
           setFormData({
-            email: '',
-            name: '',
-            subject: '',
-            message: '', 
+            email: "",
+            name: "",
+            subject: "",
+            message: "",
           });
         },
         (error) => {
           setIsSending(false);
-          setErrorMessage('There was an error sending your message. Please try again.');
+          setErrorMessage(
+            "There was an error sending your message. Please try again."
+          );
         }
       );
   };
 
   return (
-    <div className="flex flex-col md:min-h-screen justify-center">  {/* Added justify-center for vertical centering */}
+    <div className="flex flex-col md:min-h-screen justify-center">
+      {" "}
+      {/* Added justify-center for vertical centering */}
       {/* Full-width NavBar */}
       <NavBar />
       <div className="flex flex-col items-center justify-center w-full pt-10 px-4 animate-fade-in-up">
-        <div className="w-full max-w-3xl flex flex-col gap-4"> {/* Increased max width */}
+        <div className="w-full max-w-3xl flex flex-col gap-4">
+          {" "}
+          {/* Increased max width */}
           <div className="border-solid border-2 border-zinc-50 p-1">
             <div className="text-center bg-zinc-50 uppercase">
               <h1 className="text-4xl font-semibold uppercase">Contact Me</h1>
             </div>
           </div>
-
           {/* Socials Section */}
           <div className="p-2 bg-zinc-50 flex flex-col justify-center gap-4 text-center">
             <h2 className="text-2xl uppercase">Socials</h2>
@@ -120,7 +126,6 @@ function Contact() {
               </a>
             </div>
           </div>
-
           {/* E-Mail Section */}
           <div className="bg-zinc-50 flex flex-col text-center">
             <h2 className="p-2 text-2xl uppercase">E-Mail</h2>
@@ -165,7 +170,7 @@ function Contact() {
                 className="w-full border-2 border-slate-800 px-6 py-3 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
                 disabled={isSending}
               >
-                {isSending ? 'Sending...' : 'SEND'}
+                {isSending ? "Sending..." : "SEND"}
               </button>
             </form>
 
@@ -177,7 +182,6 @@ function Contact() {
               <p className="text-red-500 mt-4">{errorMessage}</p>
             )}
           </div>
-
           <Footer />
         </div>
       </div>

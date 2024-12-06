@@ -1,8 +1,13 @@
 import Tab from "../Tab";
 import Footer from "../Navigation/Footer";
+import useNavigationHotkeys from "../../Hooks/useNavigationHotkeys";
 
 const Landing = () => {
   const currentYear = new Date().getFullYear();
+
+  // This is a custom hook that listens for key presses and navigates to the appropriate page
+  useNavigationHotkeys();
+
   return (
     <div className="flex flex-col h-screen bg-cover bg-center bg-landing-image">
       <div className="m-auto animate-fade-in-up flex gap-4 flex-col">

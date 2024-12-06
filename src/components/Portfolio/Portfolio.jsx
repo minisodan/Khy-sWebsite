@@ -5,6 +5,7 @@ import Filter from "./Filter"; // Import the Filter component
 import { useState, useRef, useEffect, useCallback } from "react";
 import Fuse from "fuse.js";
 import Footer from "../Navigation/Footer";
+import { useHotkeys } from "react-hotkeys-hook";
 
 const FULL_METADATA = require("./search.json");
 
@@ -126,6 +127,16 @@ const Portfolio = () => {
   const toggleFilter = () => {
     setFilterOpen((prev) => !prev);
   };
+
+  useHotkeys("esc", () => {
+    // Close Carousel when the Escape key is pressed
+    // Make sure to only do this if the carousel is open
+    if (carouselOpen) closeCarousel();
+
+    // Close Filter when the Escape key is pressed
+    // Make sure to only do this if the filter is open
+    if (filterOpen) toggleFilter();
+  });
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen">

@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import Tab from "../Tab";
+import useNavigationHotkeys from "../../Hooks/useNavigationHotkeys";
 
 const NavBar = () => {
   const location = useLocation();
@@ -13,6 +14,9 @@ const NavBar = () => {
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  // Hotkeys
+  useNavigationHotkeys();
 
   return (
     <div className="lg:fixed p-3 md:h-full md:fixed md:top-0 md:left-0 md:w-44 p-2">
