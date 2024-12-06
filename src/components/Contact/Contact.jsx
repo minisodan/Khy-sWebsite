@@ -58,11 +58,11 @@ function Contact() {
   };
 
   return (
-    <div className="flex flex-col md:min-h-screen">
+    <div className="flex flex-col md:min-h-screen justify-center">  {/* Added justify-center for vertical centering */}
       {/* Full-width NavBar */}
       <NavBar />
       <div className="flex flex-col items-center justify-center w-full pt-10 px-4 animate-fade-in-up">
-        <div className="w-full max-w-3xl flex flex-col gap-4 md:mt-[5%]"> {/* Increased max width */}
+        <div className="w-full max-w-3xl flex flex-col gap-4"> {/* Increased max width */}
           <div className="border-solid border-2 border-zinc-50 p-1">
             <div className="text-center bg-zinc-50 uppercase">
               <h1 className="text-4xl font-semibold uppercase">Contact Me</h1>
