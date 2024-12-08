@@ -2,6 +2,9 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import Tab from "../Tab";
 import useNavigationHotkeys from "../../Hooks/useNavigationHotkeys";
+import InformationPanel from "./InformationPanel";
+import Information from "../SVG/Information";
+import SVGWrapper from "../SVG/SVGWrapper";
 
 const NavBar = () => {
   const location = useLocation();
@@ -10,9 +13,17 @@ const NavBar = () => {
   // State to manage mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // State to manage information window
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+
   // Function to toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
+  };
+
+  // Function to toggle information panel
+  const toggleInfo = () => {
+    setIsInfoOpen((prev) => !prev);
   };
 
   // Hotkeys
@@ -45,6 +56,18 @@ const NavBar = () => {
           />
           <Tab text="about" link="/about" force={forceCheck("/about")} />
           <Tab text="contact" link="/contact" force={forceCheck("/contact")} />
+
+          {/* Fill up space until the bottom */}
+          <div className="flex-1"></div>
+
+          {/* Bottom middle? left Idc someone please save me */}
+          <div className="">
+            {/* Information Panel, too the right of info icon using columns */}
+            <div className="">{isInfoOpen && <InformationPanel />}</div>
+            <button onClick={toggleInfo}>
+              <Information />
+            </button>
+          </div>
         </div>
       </div>
     </div>

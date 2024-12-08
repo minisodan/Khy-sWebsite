@@ -1,0 +1,40 @@
+.tooltip {
+  position: relative; /* Position it relative to the parent container */
+  top: 64px; /* Align with the top of the icon */
+  left: 110%; /* Push it to the right of the icon */
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.tooltip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip-list li {
+  margin-bottom: 6px;
+}
+
+.shortcut {
+  display: inline-block;
+  background-color: #666;
+  color: white;
+  font-weight: bold;
+  padding: 2px 5px;
+  margin-right: 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  min-width: 16px;
+}

@@ -83,6 +83,7 @@ const Filter = ({ filter, width, onFilterConfirm, onResetConfirm }) => {
             type="number"
             value={people}
             onChange={(e) => setPeople(e.target.value)}
+            onSelectCapture
             placeholder="Number of People"
             className="w-full mt-1 p-2 border border-gray-300 rounded"
           />
