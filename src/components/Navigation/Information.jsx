@@ -23,8 +23,9 @@ function Information() {
         <FontAwesomeIcon
           icon={faInfoCircle}
           size="lg"
-          spin
-          className="info-icon text-black hidden md:block" // Added text-black for black color
+          className={`info-icon text-black hidden md:block ${
+            isTooltipVisible ? "" : "spin"
+          }`} // Apply spin class conditionally
         />
       </button>
       {isTooltipVisible && (
