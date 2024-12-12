@@ -3,12 +3,8 @@ import emailjs from "emailjs-com";
 import Footer from "../Navigation/Footer";
 import Instagram from "../SVG/Instagram";
 import Twitter from "../SVG/Twitter";
-import Twitch from "../SVG/Twitch";
-import Youtube from "../SVG/Youtube";
-import TikTok from "../SVG/TikTok";
 import SVGWrapper from "../SVG/SVGWrapper";
 import NavBar from "../Navigation/NavBar";
-import useNavigationHotkeys from "../../Hooks/useNavigationHotkeys";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -89,39 +85,12 @@ function Contact() {
                 </SVGWrapper>
               </a>
               <a
-                href="https://mobile.twitter.com/yoh_khy"
+                href="https://x.com/PhotographAve"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <SVGWrapper>
                   <Twitter />
-                </SVGWrapper>
-              </a>
-              <a
-                href="https://m.twitch.tv/yoh_khy/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SVGWrapper>
-                  <Twitch />
-                </SVGWrapper>
-              </a>
-              <a
-                href="https://youtube.com/channel/UCAjtTiErkuflsEZbAS8rXQw"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SVGWrapper>
-                  <Youtube />
-                </SVGWrapper>
-              </a>
-              <a
-                href="https://vm.tiktok.com/TTPdh7ohPP/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SVGWrapper>
-                  <TikTok />
                 </SVGWrapper>
               </a>
             </div>
