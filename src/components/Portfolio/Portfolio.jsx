@@ -10,17 +10,23 @@ import { useHotkeys } from "react-hotkeys-hook";
 const FULL_METADATA = require("./search.json");
 
 const Portfolio = () => {
+  // Define responsive column layout for Masonry grid base on pixels
   const breakpointColumnsObj = {
     default: 4,
     1920: 3,
-    700: 2, // Show 2 columns for medium screens
-    500: 1, // Show 1 column for small screens
+    700: 2,
+    500: 1,
   };
 
+  // State to manage the carousel visibility and selected image index
   const [carouselOpen, setCarouselOpen] = useState(false);
   const [carouselImage, setCarouselImage] = useState(0);
-  const [filterOpen, setFilterOpen] = useState(false); // State for filter visibility
-  const [filterWidth, setFilterWidth] = useState(0); // State for filter width
+
+  // State to manage the filter visibility and width
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [filterWidth, setFilterWidth] = useState(0);
+
+  // State to track current filter settings
   const [currentFilter, setCurrentFilter] = useState({
     categories: [],
     country: "",
@@ -29,16 +35,22 @@ const Portfolio = () => {
     people: "",
     state: "",
   });
+
+  // State to hold filtered metadata
   const [metadata, setMetadata] = useState(FULL_METADATA);
 
+  // Ref for the search input element to measure width dynamically
   const searchBarRef = useRef(null);
   const [searchText, setSearchText] = useState("");
+
+  // Initialize Fuse.js for search functionality
   const fuse = new Fuse(FULL_METADATA, {
     ignoreLocation: true,
     threshold: 0.4,
     keys: ["description"],
   });
 
+  // Function to filter images based on the current filter and search text
   const filterImages = useCallback(
     (filter, search) => {
       const searchFilter = filter ?? currentFilter;
@@ -95,6 +107,7 @@ const Portfolio = () => {
     [currentFilter, searchText, fuse]
   );
 
+  // Function to reset the images to the initial state
   const resetImages = useCallback(() => {
     filterImages(
       {
@@ -109,37 +122,41 @@ const Portfolio = () => {
     );
   }, [filterImages]);
 
+  // Effect to set the filter width when the filter visibility changes
   useEffect(() => {
     if (searchBarRef.current) {
       setFilterWidth(searchBarRef.current.offsetWidth);
     }
   }, [filterOpen]);
 
+  // Open the carousel with the selected image index
   const openCarousel = (index) => {
     setCarouselOpen(true);
     setCarouselImage(index);
   };
 
+  // Close the carousel
   const closeCarousel = useCallback(() => {
     setCarouselOpen(false);
   }, []);
 
+  // Toggle the visibility of the filter component
   const toggleFilter = () => {
     setFilterOpen((prev) => !prev);
   };
 
+  // Handle Escape key to close carousel or filter
   useHotkeys("esc", () => {
     // Close Carousel when the Escape key is pressed
-    // Make sure to only do this if the carousel is open
     if (carouselOpen) closeCarousel();
 
     // Close Filter when the Escape key is pressed
-    // Make sure to only do this if the filter is open
     if (filterOpen) toggleFilter();
   });
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
+      {/* Render the ImageCarousel if carouselOpen is true */}
       {carouselOpen && (
         <ImageCarousel
           imageMetadata={metadata}
@@ -148,16 +165,20 @@ const Portfolio = () => {
         />
       )}
 
+      {/* Navigation bar component */}
       <NavBar />
 
       <div className="ml-0 md:ml-44 w-full flex flex-col gap-2 p-3 animate-fade-in-up">
         <div className="flex p-1 border-2 relative">
+          {/* Button to toggle the filter panel */}
           <button
-            onClick={toggleFilter} // Toggle the filter pop-out
+            onClick={toggleFilter}
             className="border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
           >
             ≣
           </button>
+
+          {/* Search bar input */}
           <input
             ref={searchBarRef}
             value={searchText}
@@ -170,15 +191,19 @@ const Portfolio = () => {
               filterImages(undefined, e.target.value);
             }}
           />
+
+          {/* Button to clear the search input */}
           <button
             onClick={() => {
               setSearchText("");
               filterImages(undefined, "");
-            }} // Toggle the filter pop-out
+            }}
             className="border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
           >
             X
           </button>
+
+          {/* Render the Filter component if filterOpen is true */}
           {filterOpen && (
             <Filter
               filter={currentFilter}
@@ -192,9 +217,10 @@ const Portfolio = () => {
                 setFilterOpen(false);
               }}
             />
-          )}{" "}
+          )}
         </div>
 
+        {/* Masonry grid to display images */}
         <div className="border-solid border-2 border-zinc-50 p-1">
           <Masonry
             breakpointCols={breakpointColumnsObj}
@@ -214,6 +240,8 @@ const Portfolio = () => {
             ))}
           </Masonry>
         </div>
+
+        {/* Footer component */}
         <Footer />
       </div>
     </div>
