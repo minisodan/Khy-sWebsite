@@ -30,11 +30,6 @@ const ImageCarousel = ({ imageMetadata, clickClose, initialSlide }) => {
                   alt={entry.description}
                   className="carousel-image border-2 border-zinc-50 p-1 mx-auto md:mx-0" // Center on mobile, default on larger screens
                 />
-                <div className="bg-white p-6 mt-3 flex flex-col justify-between w-full max-w-lg border-2 border-zinc-50 mx-auto md:mx-0">
-                  <p className="text-gray-700 text-xl text-center">
-                    {entry.description}
-                  </p>
-                </div>
               </div>
             </div>
           ))}
