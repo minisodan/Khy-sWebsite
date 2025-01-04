@@ -63,7 +63,7 @@
       "state": "Louisiana",
       "country": "USA"
     },
-    "categories": ["People"]
+    "categories": ["People", "Landscapes"]
   },
   {
     "name": "7.jpg",
@@ -74,7 +74,7 @@
       "state": "Minnesota",
       "country": "USA"
     },
-    "categories": ["People", "Landscapes"]
+    "categories": ["People"]
   },
   {
     "name": "8.jpg",
@@ -145,7 +145,7 @@
   {
     "name": "14.jpg",
     "date": "04/04/2022",
-    "description": "Photo of men in the studio during photo shoot",
+    "description": "Tyler, the Creator. Concert",
     "people": 3,
     "location": {
       "state": "California",
@@ -156,7 +156,7 @@
   {
     "name": "15.jpg",
     "date": "01/01/2018",
-    "description": "Tyler, the Creator. Concert",
+    "description": "Photo of a man in the studio during photo shoot",
     "people": 1,
     "location": {
       "state": "Minnesota",
@@ -250,7 +250,7 @@
       "state": "New York",
       "country": "USA"
     },
-    "categories": ["People", "Landscapes"]
+    "categories": ["People", "Landscapes", "Nature"]
   },
   {
     "name": "24.jpg",
@@ -261,7 +261,7 @@
       "state": "Minnesota",
       "country": "USA"
     },
-    "categories": ["Buildings", "Landscapes"]
+    "categories": ["Buildings", "Landscapes", "Nature"]
   },
   {
     "name": "25.jpg",
@@ -294,7 +294,7 @@
       "state": "California",
       "country": "USA"
     },
-    "categories": ["People"]
+    "categories": ["People", "Other"]
   },
   {
     "name": "28.jpg",
@@ -305,7 +305,7 @@
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["People"]
+    "categories": ["People", "Other"]
   },
   {
     "name": "29.jpg",
@@ -476,40 +476,40 @@
     "name": "44.jpg",
     "date": "05/11/2024",
     "description": "Night time in the city of Akihabara, Japan",
+    "people": 0,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Buildings"]
+  },
+  {
+    "name": "45.jpg",
+    "date": "05/3/2024",
+    "description": "Central Akihabara",
     "people": 10,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["People", "Buildings"]
-  },
-  {
-    "name": "45.jpg",
-    "date": "05/3/2024",
-    "description": "Remm Akihabara hotel room ",
-    "people": 0,
-    "location": {
-      "state": "Akihabara",
-      "country": "Japan"
-    },
-    "categories": ["Landscapes", "Buildings"]
+    "categories": ["Landscapes", "Buildings", "People"]
   },
   {
     "name": "46.jpg",
     "date": "05/12/2024",
-    "description": "Aoki building in Akihabara",
+    "description": "Akihabara station",
     "people": 0,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["Landscapes", "Buildings"]
+    "categories": ["Landscapes", "Other"]
   },
   {
     "name": "47.jpg",
     "date": "05/13/2024",
-    "description": "Sky walk in Akihbara",
-    "people": 1,
+    "description": "Central Akihbara station",
+    "people": 4,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
@@ -519,19 +519,8 @@
   {
     "name": "48.jpg",
     "date": "05/13/2024",
-    "description": "Train in Akihabara, Japan",
-    "people": 0,
-    "location": {
-      "state": "Akihabara",
-      "country": "Japan"
-    },
-    "categories": ["Landscapes", "Buildings"]
-  },
-  {
-    "name": "49.jpg",
-    "date": "05/14/2024",
     "description": "Women in Japan, sitting at store",
-    "people": 2,
+    "people": 1,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
@@ -539,9 +528,20 @@
     "categories": ["People"]
   },
   {
+    "name": "49.jpg",
+    "date": "05/14/2024",
+    "description": "Tain station in Japan",
+    "people": 0,
+    "location": {
+      "state": "Akihabara",
+      "country": "Japan"
+    },
+    "categories": ["Landscapes", "Other", "Buildings"]
+  },
+  {
     "name": "50.jpg",
     "date": "05/15/2024",
-    "description": "Akihabara train station",
+    "description": "Building in Akihabara",
     "people": 4,
     "location": {
       "state": "Akihabara",
@@ -552,13 +552,13 @@
   {
     "name": "51.jpg",
     "date": "05/15/2024",
-    "description": "Building in Akihabara",
+    "description": "Sky walk at train station in Akihabara",
     "people": 4,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["People", "Buildings"]
+    "categories": ["People", "Buildings", "Landscapes"]
   },
   {
     "name": "52.jpg",
@@ -574,7 +574,7 @@
   {
     "name": "53.jpg",
     "date": "05/09/2025",
-    "description": "Train tracks in",
+    "description": "Train tracks in Akihabara",
     "people": 0,
     "location": {
       "state": "Akihabara",
@@ -635,7 +635,7 @@
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["People", "Buildings"]
+    "categories": ["People", "Buildings", "Landscapes"]
   },
   {
     "name": "59.jpg",
@@ -849,7 +849,7 @@
   {
     "name": "78.jpg",
     "date": "09/04/2022",
-    "description": "Photoshot on a tennis court",
+    "description": "Photoshot of a girl on tennis court",
     "people": 1,
     "location": {
       "state": "Minnesota",
@@ -866,7 +866,7 @@
       "state": "New York",
       "country": "USA"
     },
-    "categories": ["Landscapes", "Buildings"]
+    "categories": ["Landscapes", "Buildings", "People"]
   },
   {
     "name": "80.jpg",
@@ -882,10 +882,10 @@
   {
     "name": "81.jpg",
     "date": "09/04/2022",
-    "description": "Sun going down on the Minnesota state fair",
+    "description": "Guy smoking in California parking lot",
     "people": 10,
     "location": {
-      "state": "Minnesota",
+      "state": "California",
       "country": "USA"
     },
     "categories": ["Landscapes", "People"]
@@ -904,7 +904,7 @@
   {
     "name": "83.jpg",
     "date": "09/04/2022",
-    "description": "Concert",
+    "description": "Keatsdidit Concert",
     "people": 3,
     "location": {
       "state": "Minnesota",
@@ -926,8 +926,8 @@
   {
     "name": "85.jpg",
     "date": "09/04/2022",
-    "description": "Fighting game turn",
-    "people": 3,
+    "description": "Fighting game tournament",
+    "people": 2,
     "location": {
       "state": "Minnesota",
       "country": "USA"
@@ -937,7 +937,7 @@
   {
     "name": "86.jpg",
     "date": "09/04/2022",
-    "description": "Fighting game turn",
+    "description": "Fighting game tournament",
     "people": 3,
     "location": {
       "state": "Minnesota",
@@ -954,12 +954,12 @@
       "state": "Minnesota",
       "country": "USA"
     },
-    "categories": ["Landscapes", "Other"]
+    "categories": ["Landscapes", "Other", "Nature"]
   },
   {
     "name": "88.jpg",
     "date": "09/04/2022",
-    "description": "water damn",
+    "description": "water dam",
     "people": 0,
     "location": {
       "state": "Minnesota",
@@ -981,7 +981,7 @@
   {
     "name": "90.jpg",
     "date": "09/04/2022",
-    "description": "Person smiling at house party",
+    "description": "Guys smoking at a house party",
     "people": 10,
     "location": {
       "state": "Minnesota",
@@ -1058,7 +1058,7 @@
   {
     "name": "97.jpg",
     "date": "03/22/2024",
-    "description": "Photoshoot in retro store",
+    "description": "Photoshoot in retro party",
     "people": 1,
     "location": {
       "state": "Minnesota",
@@ -1091,7 +1091,7 @@
   {
     "name": "98.jpg",
     "date": "03/22/2024",
-    "description": "Tattoo artist",
+    "description": "Guy smoking",
     "people": 1,
     "location": {
       "state": "California",
@@ -1146,8 +1146,8 @@
   {
     "name": "115.jpg",
     "date": "05/23/2024",
-    "description": "Tain station in Japan",
-    "people": 10,
+    "description": "Train station in Japan",
+    "people": 0,
     "location": {
       "state": "",
       "country": "Japan"
@@ -1179,7 +1179,7 @@
   {
     "name": "108.jpg",
     "date": "05/21/2024",
-    "description": "Enmpty stret in Japan",
+    "description": "Empty stret in Japan",
     "people": 0,
     "location": {
       "state": "Mitaka",
@@ -1245,7 +1245,7 @@
   {
     "name": "116.jpg",
     "date": "05/23/2024",
-    "description": "Tain station in Japan",
+    "description": "Train station in Japan",
     "people": 10,
     "location": {
       "state": "",
