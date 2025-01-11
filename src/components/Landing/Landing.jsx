@@ -18,8 +18,10 @@ const Landing = () => {
         </div>
         <div className="flex justify-center gap-2 text-zinc-50 bg-zinc-50 p-1">
           <Tab text="portfolio" link="/portfolio" />
+          <Tab text="press" link="/press" />
           <Tab text="about" link="/about" />
           <Tab text="contact" link="/contact" />
+
           {/* email api*/}
           {/* <Tab text="email me" link=""/> */}
         </div>
