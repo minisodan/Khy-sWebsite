@@ -39,6 +39,7 @@ const NavBar = () => {
             link="/portfolio"
             force={forceCheck("/portfolio")}
           />
+          <Tab text="press" link="/press" force={forceCheck("/press")} />
           <Tab text="about" link="/about" force={forceCheck("/about")} />
           <Tab text="contact" link="/contact" force={forceCheck("/contact")} />
           {/* Fill up space until the bottom */}

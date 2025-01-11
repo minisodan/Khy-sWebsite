@@ -63,7 +63,7 @@ function Contact() {
       {/* Full-width NavBar */}
       <NavBar />
       <div className="flex flex-col items-center justify-center w-full pt-10 px-4 animate-fade-in-up">
-        <div className="w-full max-w-3xl flex flex-col gap-4">
+        <div className="w-full max-w-3xl flex flex-col md:w-3/4 lg:w-2/3 p-6 gap-4 md:ml-44">
           {" "}
           {/* Increased max width */}
           <div className="border-solid border-2 border-zinc-50 p-1">
