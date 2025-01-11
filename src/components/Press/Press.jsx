@@ -8,7 +8,7 @@ const Press = () => {
       title: "More Than a Picture",
       description:
         "Khyron, a 22-year-old photographer from northern Louisiana, uses his passion for storytelling through photography to capture diverse cultures and people, inspired by his journey from a small-town upbringing to pursuing his dreams at MNSU.",
-      image: "/articleimages/KhyArticle1.jpg",
+      image: "/articleimages/2020vision.webp",
       link: "https://2020vision.digital/2021/11/01/more-than-a-picture/",
     },
     {
@@ -16,7 +16,7 @@ const Press = () => {
       title: "Khyron Winfield exhibit a vibrant display of humanity, talent",
       description:
         "Khyron Winfield, an emerging photographer from Louisiana, channels his passion for storytelling through vibrant, intimate images that celebrate diversity and urban culture, while navigating personal loss and newfound recognition as an artist.",
-      image: "/articleimages/KhyArticle2.jpg",
+      image: "/articleimages/makatofreepress.webp",
       link: "https://www.mankatofreepress.com/news/lifestyles/khyron-winfield-exhibit-a-vibrant-display-of-humanity-talent/article_2414b9aa-7cb6-11ed-9bd8-57f0723b5809.html",
     },
   ];
@@ -35,7 +35,7 @@ const Press = () => {
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full md:w-48 h-48 object-cover"
+                  className="w-full md:w-48 h-48 object-contain"
                 />
                 <div className="p-4 flex flex-col justify-between">
                   <h2 className="text-xl font-semibold text-gray-800">
