@@ -1,4 +1,5 @@
 import NavBar from "../Navigation/NavBar";
+import Footer from "../Navigation/Footer";
 
 const Press = () => {
   const articles = [
@@ -51,6 +52,7 @@ const Press = () => {
               </div>
             </div>
           ))}
+          <Footer />
         </div>
       </div>
     </div>
