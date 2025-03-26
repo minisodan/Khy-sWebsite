@@ -508,24 +508,24 @@
   {
     "name": "47.jpg",
     "date": "05/13/2024",
-    "description": "Central Akihbara station",
-    "people": 4,
+    "description": "People with Flowers near a street",
+    "people": 3,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["People", "Buildings", "Landscapes"]
+    "categories": ["People", "Nature", "Buildings"]
   },
   {
     "name": "48.jpg",
     "date": "05/13/2024",
-    "description": "Women in Japan, sitting at store",
+    "description": "Man walking in a train",
     "people": 1,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["People"]
+    "categories": ["People", "other"]
   },
   {
     "name": "49.jpg",
@@ -1212,13 +1212,13 @@
   {
     "name": "112.jpg",
     "date": "05/21/2024",
-    "description": "Remm Akihabara hotel room view",
-    "people": 0,
+    "description": "Man sitting in car on a street in Japan",
+    "people": 1,
     "location": {
       "state": "Akihabara",
       "country": "Japan"
     },
-    "categories": ["Buildings", "Landscapes"]
+    "categories": ["People", "Other"]
   },
   {
     "name": "113.jpg",
