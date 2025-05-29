@@ -67,7 +67,7 @@ const Portfolio = () => {
         searchFilteredMetadata.filter((image) => {
           const filterByPeople = () =>
             searchFilter.people
-              ? image.people === Number(searchFilter.people)
+              ? image.people >= Number(searchFilter.people)
               : true;
 
           const filterByCategory = () =>
@@ -77,11 +77,11 @@ const Portfolio = () => {
                 )
               : true;
 
-          const filterByLocation = () =>
+          const filterByLocation = () => 
             searchFilter.state
-              ? image.location.state === searchFilter.state
+              ? image.location.state.toLowerCase() === searchFilter.state.toLowerCase()
               : true && searchFilter.country
-              ? image.location.country === searchFilter.country
+              ? image.location.country.toLowerCase() === searchFilter.country.toLowerCase()
               : true;
 
           let filterFromDate = searchFilter.fromDate
@@ -191,17 +191,6 @@ const Portfolio = () => {
               filterImages(undefined, e.target.value);
             }}
           />
-
-          {/* Button to clear the search input */}
-          <button
-            onClick={() => {
-              setSearchText("");
-              filterImages(undefined, "");
-            }}
-            className="border-slate-800 px-4 py-2 bg-white text-slate-800 hover:bg-slate-800 hover:text-zinc-50 transition-colors duration-300"
-          >
-            X
-          </button>
 
           {/* Render the Filter component if filterOpen is true */}
           {filterOpen && (
