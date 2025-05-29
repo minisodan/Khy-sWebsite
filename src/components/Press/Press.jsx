@@ -19,6 +19,14 @@ const Press = () => {
       image: "/articleimages/makatofreepress.webp",
       link: "https://www.mankatofreepress.com/news/lifestyles/khyron-winfield-exhibit-a-vibrant-display-of-humanity-talent/article_2414b9aa-7cb6-11ed-9bd8-57f0723b5809.html",
     },
+    {
+      id: 3,
+      title: "Student’s photo gallery lights up CSU",
+      description: "Minnesota State University, Mankato senior Kyron Winfield showcased his photography collection Human Xenon in the CSU gallery, capturing candid, authentic moments of everyday life. Inspired by the light-emitting element xenon, his work reflects a passion for preserving fleeting, unrepeatable human experiences.",
+      image: "/articleimages/TheRepoprter.png",
+      link: "https://www.msureporter.com/2022/10/06/students-photo-gallery-lights-up-csu%EF%BF%BC/"
+    },
+
   ];
 
   return (

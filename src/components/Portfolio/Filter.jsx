@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Filter = ({ filter, width, onFilterConfirm, onResetConfirm }) => {
   // State for managing filter inputs
