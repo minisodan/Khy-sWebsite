@@ -11,7 +11,7 @@ function About() {
           <div className="border-solid border-2 border-zinc-50 p-1 w-full">
             <div className="text-center bg-zinc-50 uppercase">
             <h1 className="text-4xl font-semibold uppercase">
-            Learn About Me
+             KHYЯON
               </h1>
             </div>
           </div>

@@ -39,7 +39,7 @@ function Contact() {
       .then(
         (result) => {
           setIsSending(false);
-          setSuccessMessage("Your message has been sent successfully!");
+          setSuccessMessage("Your email has been sent successfully!");
           setFormData({
             email: "",
             name: "",
