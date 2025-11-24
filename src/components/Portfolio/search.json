@@ -310,10 +310,10 @@
   {
     "name": "29.jpg",
     "date": "05/02/2024",
-    "description": "Picture taken of a bus mirror, a reflection of people",
+    "description": "people at night walking near neon sign with umbrella's",
     "people": 7,
     "location": {
-      "state": "Akihabara",
+      "state": "Tokyo",
       "country": "Japan"
     },
     "categories": ["People"]
@@ -497,13 +497,13 @@
   {
     "name": "46.jpg",
     "date": "05/12/2024",
-    "description": "Akihabara station",
-    "people": 0,
+    "description": "People in Tokyo walking with umbrella's",
+    "people": 5,
     "location": {
-      "state": "Akihabara",
+      "state": "Tokyo",
       "country": "Japan"
     },
-    "categories": ["Landscapes", "Other"]
+    "categories": ["People", "Buildings"]
   },
   {
     "name": "47.jpg",
@@ -541,13 +541,13 @@
   {
     "name": "50.jpg",
     "date": "05/15/2024",
-    "description": "Building in Akihabara",
-    "people": 4,
+    "description": "Building in Tokyo",
+    "people": 0,
     "location": {
-      "state": "Akihabara",
+      "state": "Tokyo",
       "country": "Japan"
     },
-    "categories": ["People", "Buildings"]
+    "categories": ["Buildings", "Landscapes"]
   },
   {
     "name": "51.jpg",
@@ -772,13 +772,13 @@
   {
     "name": "71.jpg",
     "date": "05/22/2024",
-    "description": "Temple in Akihabara",
-    "people": 0,
+    "description": "Tokyo people in rain",
+    "people": 10,
     "location": {
-      "state": "Akihabara",
+      "state": "Tokyo",
       "country": "Japan"
     },
-    "categories": ["Landscapes", "Other"]
+    "categories": ["People", "Buildings", "Landscapes"]
   },
   {
     "name": "72.jpg",
@@ -1318,5 +1318,49 @@
       "country": "Japan"
     },
     "categories": ["Nature", "People"]
+  },
+  {
+    "name": "124.jpg",
+    "date": "05/21/2024",
+    "description": "People on top of building at park",
+    "people": 10,
+    "location": {
+      "state": "",
+      "country": "Japan"
+    },
+    "categories": ["Nature", "People", "Buildings", ""]
+  },
+    {
+    "name": "124.jpg",
+    "date": "05/04/2024",
+    "description": "People on top of building at park",
+    "people": 10,
+    "location": {
+      "state": "",
+      "country": "Japan"
+    },
+    "categories": ["Nature", "People", "Buildings", "Landscapes"]
+  },
+  {
+    "name": "125.jpg",
+    "date": "06/21/2024",
+    "description": "Picture of inner city of Japan",
+    "people": 0,
+    "location": {
+      "state": "",
+      "country": "Japan"
+    },
+    "categories": ["Buildings", "Landscapes"]
+  },
+    {
+    "name": "126.jpg",
+    "date": "06/21/2024",
+    "description": "Picture of inner city of Japan with Fisheye lens",
+    "people": 0,
+    "location": {
+      "state": "",
+      "country": "Japan"
+    },
+    "categories": ["Buildings", "Landscapes"]
   }
 ]
