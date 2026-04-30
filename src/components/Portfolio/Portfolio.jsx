@@ -37,7 +37,6 @@ const Portfolio = () => {
   const searchBarRef = useRef(null);
   const [searchText, setSearchText] = useState("");
 
-  // ✅ FIXED: stable Fuse instance (no CI issues)
   const fuse = useMemo(() => {
     return new Fuse(FULL_METADATA, {
       ignoreLocation: true,
@@ -46,7 +45,6 @@ const Portfolio = () => {
     });
   }, []);
 
-  // ✅ FIXED: safer location filter logic
   const filterImages = useCallback(
     (filter, search) => {
       const searchFilter = filter ?? currentFilter;
