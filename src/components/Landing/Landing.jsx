@@ -3,8 +3,6 @@ import Footer from "../Navigation/Footer";
 import useNavigationHotkeys from "../../Hooks/useNavigationHotkeys";
 
 const Landing = () => {
-  const currentYear = new Date().getFullYear();
-
   // This is a custom hook that listens for key presses and navigates to the appropriate page
   useNavigationHotkeys();
 

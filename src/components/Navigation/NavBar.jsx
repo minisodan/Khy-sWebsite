@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Tab from "../Tab";
 import useNavigationHotkeys from "../../Hooks/useNavigationHotkeys";
 import Information from "./Information";
