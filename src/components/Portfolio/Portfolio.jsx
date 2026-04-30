@@ -3,6 +3,7 @@ import NavBar from "../Navigation/NavBar";
 import ImageCarousel from "./Carousel";
 import Filter from "./Filter"; // Import the Filter component
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useMemo } from "react";
 import Fuse from "fuse.js";
 import Footer from "../Navigation/Footer";
 import { useHotkeys } from "react-hotkeys-hook";
@@ -44,11 +45,14 @@ const Portfolio = () => {
   const [searchText, setSearchText] = useState("");
 
   // Initialize Fuse.js for search functionality
-  const fuse = new Fuse(FULL_METADATA, {
+
+const fuse = useMemo(() => {
+  return new Fuse(FULL_METADATA, {
     ignoreLocation: true,
     threshold: 0.4,
     keys: ["description"],
   });
+}, [FULL_METADATA]);
 
   // Function to filter images based on the current filter and search text
   const filterImages = useCallback(
